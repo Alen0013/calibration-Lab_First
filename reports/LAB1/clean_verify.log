@@ -1,0 +1,14 @@
+$ /workspace/scratch/d920b57cb1dd/calibration-lab1/../clean-env/bin/python -m calibration_lab.cli verify --config configs/lab1.yaml
+
+{
+  "status": "совпадает",
+  "path": "data/raw/breast_cancer.csv",
+  "sha256": "fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed",
+  "size_bytes": 119913,
+  "source": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.8.0/sklearn/datasets/data/breast_cancer.csv",
+  "dataset_url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+  "license": "CC BY 4.0",
+  "acquisition": "https_official_scikit_learn_1.8.0"
+}
+
+exit_code=0

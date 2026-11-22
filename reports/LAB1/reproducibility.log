@@ -1,0 +1,16 @@
+Повторный прогон EDA
+Seed: 42
+MLflow A: a798160fb1df496391eed304040e7797
+MLflow B: eb7c0d5433c445758b6c3a1aaf6a1e90
+feature_summary.csv: совпадает
+class_balance.csv: совпадает
+correlations.csv: совпадает
+calibration_bins.csv: совпадает
+calibration_metrics.csv: совпадает
+test_predictions.csv: совпадает
+split_indices.json: совпадает
+eda_stats.csv: совпадает
+hash_manifest.json: совпадает
+config_snapshot.json: совпадает
+Максимальная разница метрик: 0.0
+Итог: совпадает

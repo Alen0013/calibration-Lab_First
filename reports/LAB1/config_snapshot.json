@@ -1,0 +1,17 @@
+{
+  "variant": 25,
+  "lab": 1,
+  "author": "Автор не указан",
+  "seed": 42,
+  "raw_data": "data/raw/breast_cancer.csv",
+  "manifest": "hash_manifest.json",
+  "output_dir": "reports/LAB1",
+  "mlflow_dir": "mlruns",
+  "experiment_name": "lab1_variant25_calibration",
+  "test_fraction": 0.2,
+  "calibration_fraction": 0.2,
+  "bins": 10,
+  "logistic_c": 1.0,
+  "max_iter": 2000,
+  "iqr_multiplier": 1.5
+}

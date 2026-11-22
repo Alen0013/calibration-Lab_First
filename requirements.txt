@@ -1,0 +1,3 @@
+# Install the package and its verification tools with the versions in pyproject.toml.
+-e .[dev]
+

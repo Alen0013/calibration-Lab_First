@@ -1,0 +1,29 @@
+{
+  "all_blocked": true,
+  "cases": [
+    {
+      "case": "style",
+      "commit_exit_code": 1,
+      "head_unchanged": true,
+      "expected_marker": "Ruff lint",
+      "marker_observed": true,
+      "blocked": true
+    },
+    {
+      "case": "secret",
+      "commit_exit_code": 1,
+      "head_unchanged": true,
+      "expected_marker": "BLOCK_SECRET",
+      "marker_observed": true,
+      "blocked": true
+    },
+    {
+      "case": "oversize",
+      "commit_exit_code": 1,
+      "head_unchanged": true,
+      "expected_marker": "BLOCK_SIZE",
+      "marker_observed": true,
+      "blocked": true
+    }
+  ]
+}
