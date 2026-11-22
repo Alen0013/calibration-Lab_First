@@ -1,6 +1,6 @@
 """Validated, explicit configuration for the first laboratory work."""
 
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 from typing import Literal
 
 import yaml
@@ -31,8 +31,14 @@ class LabConfig(BaseModel):
         if self.test_fraction + self.calibration_fraction > 0.7:
             raise ValueError("Для обучения должно оставаться не менее 30% данных")
         for name in ("raw_data", "manifest", "output_dir", "mlflow_dir"):
-            path = Path(getattr(self, name))
-            if path.is_absolute() or ".." in path.parts:
+            value = getattr(self, name)
+            posix_path, windows_path = PurePosixPath(value), PureWindowsPath(value)
+            if (
+                posix_path.is_absolute()
+                or windows_path.anchor
+                or ".." in posix_path.parts
+                or ".." in windows_path.parts
+            ):
                 raise ValueError(f"{name}: ожидается относительный путь внутри проекта")
         return self
 

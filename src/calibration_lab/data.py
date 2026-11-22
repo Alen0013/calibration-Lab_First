@@ -78,6 +78,9 @@ def prepare_data(config: LabConfig, root: Path, download: bool = False) -> dict:
             acquisition = "https_official_scikit_learn_1.8.0"
         else:
             payload = files("sklearn.datasets.data").joinpath("breast_cancer.csv").read_bytes()
+            # Windows package wheels can store the CSV with CRLF newlines.
+            # Canonicalize package-supplied bytes; the pinned SHA-256 is still verified.
+            payload = payload.replace(b"\r\n", b"\n")
             acquisition = "offline_copy_from_installed_scikit_learn_verified_by_sha256"
         _check_bytes(payload)
         path.parent.mkdir(parents=True, exist_ok=True)
