@@ -1,0 +1,81 @@
+LAB1 variant 25: actual negative Git commit controls
+UTC: 2026-11-22T14:43:59.666779+00:00
+Method: disposable repository, real installed pre-commit hook, real git commit.
+Credentials in this test are synthetic. No credential values are printed.
+Successful control = nonzero commit exit + unchanged HEAD + expected blocker.
+
+=== STYLE ===
+$ git add -- bad_style.py
+$ git commit -m 'test: reject style fixture'
+Ruff lint................................................................Failed
+- hook id: ruff-check
+- exit code: 1
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> bad_style.py:1:1
+  |
+1 | import os
+  | ^^^^^^^^^
+2 | x=  1
+  |
+help: Organize imports
+
+F401 [*] `os` imported but unused
+ --> bad_style.py:1:8
+  |
+1 | import os
+  |        ^^
+2 | x=  1
+  |
+help: Remove unused import: `os`
+
+Found 2 errors.
+[*] 2 fixable with the `--fix` option.
+
+Ruff format check........................................................Failed
+- hook id: ruff-format
+- exit code: 1
+
+Would reformat: bad_style.py
+1 file would be reformatted
+
+Staged secrets and file size.............................................Passed
+Python syntax and structured file checks.................................Passed
+commit_exit_code=1
+head_unchanged=True
+control_passed=True
+
+=== SECRET ===
+$ git add -- fake_credential.txt
+$ git commit -m 'test: reject secret fixture'
+Ruff lint............................................(no files to check)Skipped
+Ruff format check....................................(no files to check)Skipped
+Staged secrets and file size.............................................Failed
+- hook id: secrets-and-size
+- exit code: 1
+
+BLOCK_SECRET fake_credential.txt: GitHub token detected; value redacted. Remove credentials from the staged file.
+BLOCK_SECRET fake_credential.txt: credential assignment detected; value redacted. Remove credentials from the staged file.
+
+Python syntax and structured file checks.................................Passed
+commit_exit_code=1
+head_unchanged=True
+control_passed=True
+
+=== OVERSIZE ===
+$ git add -- oversized_fixture.bin
+$ git commit -m 'test: reject oversize fixture'
+Ruff lint............................................(no files to check)Skipped
+Ruff format check....................................(no files to check)Skipped
+Staged secrets and file size.............................................Failed
+- hook id: secrets-and-size
+- exit code: 1
+
+BLOCK_SIZE oversized_fixture.bin: 1048577 bytes exceeds 1048576 bytes. Store large artifacts outside Git.
+
+Python syntax and structured file checks.............(no files to check)Skipped
+commit_exit_code=1
+head_unchanged=True
+control_passed=True
+
+RESULT: PASS

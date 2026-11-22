@@ -1,0 +1,7 @@
+$ uv pip check --python /workspace/scratch/d920b57cb1dd/calibration-lab1/../clean-env/bin/python
+
+Using Python 3.12.14 environment at: /workspace/scratch/d920b57cb1dd/clean-env
+Checked 73 packages in 96ms
+All installed packages are compatible
+
+exit_code=0

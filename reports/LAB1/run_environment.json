@@ -1,0 +1,1215 @@
+{
+  "capture_type": "post_run_snapshot_of_interpreter_used_for_final_eda",
+  "captured_at_utc": "2026-11-22T14:49:55.366956+00:00",
+  "related_run_id": "370aa595b62543838eb3cd0d501ecb5b",
+  "related_git_commit": "27348d56b63837354ef700f61c13cd723a206680",
+  "python": {
+    "executable": "/workspace/scratch/d920b57cb1dd/calibration-lab1/../.venv/bin/python",
+    "version": "3.12.14",
+    "full_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "system": "Linux",
+    "machine": "x86_64",
+    "implementation": "CPython",
+    "include_system_site_packages": true
+  },
+  "selection": {
+    "root_project": "calibration-lab1",
+    "selected_extras": [],
+    "method": "Recursive installed Requires-Dist closure; active current-platform markers; recursively propagated dependency extras.",
+    "marker_environment": {
+      "implementation_name": "cpython",
+      "implementation_version": "3.12.14",
+      "os_name": "posix",
+      "platform_machine": "x86_64",
+      "platform_release": "6.18.57",
+      "platform_system": "Linux",
+      "platform_version": "#1 SMP Tue Oct 20 21:56:04 UTC 2026",
+      "python_full_version": "3.12.14",
+      "platform_python_implementation": "CPython",
+      "python_version": "3.12",
+      "sys_platform": "linux"
+    },
+    "excluded": "Unrelated inherited packages and root project dev/report/video extras."
+  },
+  "package_count": 57,
+  "third_party_package_count": 56,
+  "versions": {
+    "annotated-doc": "0.0.7",
+    "annotated-types": "0.8.0",
+    "anyio": "4.16.0",
+    "cachetools": "6.2.6",
+    "calibration-lab1": "1.0.0",
+    "certifi": "2026.11.20",
+    "cffi": "2.1.1",
+    "charset-normalizer": "3.5.2",
+    "click": "8.5.1",
+    "cloudpickle": "3.1.3",
+    "contourpy": "1.3.3",
+    "cryptography": "50.0.2",
+    "cycler": "0.12.1",
+    "databricks-sdk": "0.169.0",
+    "fastapi": "0.165.0",
+    "fonttools": "4.61.1",
+    "gitdb": "4.0.12",
+    "gitpython": "3.2.1",
+    "google-auth": "2.63.1",
+    "h11": "0.16.0",
+    "idna": "3.20",
+    "importlib-metadata": "8.9.0",
+    "joblib": "1.5.3",
+    "kiwisolver": "1.4.9",
+    "matplotlib": "3.10.8",
+    "mlflow-skinny": "3.1.4",
+    "numpy": "2.3.5",
+    "opentelemetry-api": "1.45.2",
+    "opentelemetry-sdk": "1.45.2",
+    "opentelemetry-semantic-conventions": "0.66b2",
+    "packaging": "25.0",
+    "pandas": "2.2.3",
+    "pillow": "13.0.0",
+    "protobuf": "6.33.6",
+    "pyasn1": "0.6.5",
+    "pyasn1-modules": "0.4.2",
+    "pycparser": "3.12",
+    "pydantic": "2.14.4",
+    "pydantic-core": "2.50.5",
+    "pyparsing": "3.3.2",
+    "python-dateutil": "4.0.0",
+    "pytz": "2026.6",
+    "pyyaml": "6.0.4",
+    "requests": "2.34.2",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "seaborn": "0.13.2",
+    "smmap": "5.0.3",
+    "sqlparse": "0.6.1",
+    "starlette": "1.10.0",
+    "threadpoolctl": "3.6.0",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.5",
+    "tzdata": "2026.6",
+    "urllib3": "2.8.0",
+    "uvicorn": "0.54.0",
+    "zipp": "4.1.2"
+  },
+  "packages": {
+    "annotated-doc": {
+      "distribution_name": "annotated-doc",
+      "version": "0.0.7",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "annotated-types": {
+      "distribution_name": "annotated-types",
+      "version": "0.8.0",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "anyio": {
+      "distribution_name": "anyio",
+      "version": "4.16.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "idna>=2.8",
+          "name": "idna",
+          "extras": [],
+          "installed_version": "3.20",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "typing_extensions>=4.16.0; python_version < \"3.15\"",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 2
+    },
+    "cachetools": {
+      "distribution_name": "cachetools",
+      "version": "6.2.6",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "calibration-lab1": {
+      "distribution_name": "calibration-lab1",
+      "version": "1.0.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "numpy==2.3.5",
+          "name": "numpy",
+          "extras": [],
+          "installed_version": "2.3.5",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pandas==2.2.3",
+          "name": "pandas",
+          "extras": [],
+          "installed_version": "2.2.3",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "scikit-learn==1.8.0",
+          "name": "scikit-learn",
+          "extras": [],
+          "installed_version": "1.8.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "matplotlib==3.10.8",
+          "name": "matplotlib",
+          "extras": [],
+          "installed_version": "3.10.8",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "seaborn==0.13.2",
+          "name": "seaborn",
+          "extras": [],
+          "installed_version": "0.13.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pydantic==2.14.4",
+          "name": "pydantic",
+          "extras": [],
+          "installed_version": "2.14.4",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "PyYAML==6.0.4",
+          "name": "pyyaml",
+          "extras": [],
+          "installed_version": "6.0.4",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "mlflow-skinny==3.1.4",
+          "name": "mlflow-skinny",
+          "extras": [],
+          "installed_version": "3.1.4",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 6
+    },
+    "certifi": {
+      "distribution_name": "certifi",
+      "version": "2026.11.20",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "cffi": {
+      "distribution_name": "cffi",
+      "version": "2.1.1",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "pycparser; implementation_name != \"PyPy\"",
+          "name": "pycparser",
+          "extras": [],
+          "installed_version": "3.12",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 0
+    },
+    "charset-normalizer": {
+      "distribution_name": "charset-normalizer",
+      "version": "3.5.2",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "click": {
+      "distribution_name": "click",
+      "version": "8.5.1",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "cloudpickle": {
+      "distribution_name": "cloudpickle",
+      "version": "3.1.3",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "contourpy": {
+      "distribution_name": "contourpy",
+      "version": "1.3.3",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "numpy>=1.25",
+          "name": "numpy",
+          "extras": [],
+          "installed_version": "2.3.5",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 18
+    },
+    "cryptography": {
+      "distribution_name": "cryptography",
+      "version": "50.0.2",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "cffi>=2.0.0 ; platform_python_implementation != 'PyPy'",
+          "name": "cffi",
+          "extras": [],
+          "installed_version": "2.1.1",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 2
+    },
+    "cycler": {
+      "distribution_name": "cycler",
+      "version": "0.12.1",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 7
+    },
+    "databricks-sdk": {
+      "distribution_name": "databricks-sdk",
+      "version": "0.169.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "certifi>=2026.10.19",
+          "name": "certifi",
+          "extras": [],
+          "installed_version": "2026.11.20",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "requests<3,>=2.28.1",
+          "name": "requests",
+          "extras": [],
+          "installed_version": "2.34.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "google-auth~=2.0",
+          "name": "google-auth",
+          "extras": [],
+          "installed_version": "2.63.1",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "protobuf!=5.26.*,!=5.27.*,!=5.28.*,!=5.29.0,!=5.29.1,!=5.29.2,!=5.29.3,!=5.29.4,!=6.30.0,!=6.30.1,!=6.31.0,<8.0,>=4.25.8",
+          "name": "protobuf",
+          "extras": [],
+          "installed_version": "6.33.6",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "urllib3<3,>=1.26",
+          "name": "urllib3",
+          "extras": [],
+          "installed_version": "2.8.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 24
+    },
+    "fastapi": {
+      "distribution_name": "fastapi",
+      "version": "0.165.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "starlette>=1.6.0",
+          "name": "starlette",
+          "extras": [],
+          "installed_version": "1.10.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "anyio>=4.1.0",
+          "name": "anyio",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pydantic>=2.9.0",
+          "name": "pydantic",
+          "extras": [],
+          "installed_version": "2.14.4",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "typing-extensions>=4.8.0",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "typing-inspection>=0.4.2",
+          "name": "typing-inspection",
+          "extras": [],
+          "installed_version": "0.4.5",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "annotated-doc>=0.0.2",
+          "name": "annotated-doc",
+          "extras": [],
+          "installed_version": "0.0.7",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "opentelemetry-api>=1.44.0",
+          "name": "opentelemetry-api",
+          "extras": [],
+          "installed_version": "1.45.2",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 38
+    },
+    "fonttools": {
+      "distribution_name": "fonttools",
+      "version": "4.61.1",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 28
+    },
+    "gitdb": {
+      "distribution_name": "gitdb",
+      "version": "4.0.12",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "smmap<6,>=3.0.1",
+          "name": "smmap",
+          "extras": [],
+          "installed_version": "5.0.3",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 0
+    },
+    "gitpython": {
+      "distribution_name": "GitPython",
+      "version": "3.2.1",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "gitdb<5,>=4.0.1",
+          "name": "gitdb",
+          "extras": [],
+          "installed_version": "4.0.12",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 13
+    },
+    "google-auth": {
+      "distribution_name": "google-auth",
+      "version": "2.63.1",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "pyasn1-modules>=0.2.1",
+          "name": "pyasn1-modules",
+          "extras": [],
+          "installed_version": "0.4.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "cryptography>=38.0.3; python_version < \"3.14\"",
+          "name": "cryptography",
+          "extras": [],
+          "installed_version": "50.0.2",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 34
+    },
+    "h11": {
+      "distribution_name": "h11",
+      "version": "0.16.0",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "idna": {
+      "distribution_name": "idna",
+      "version": "3.20",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 6
+    },
+    "importlib-metadata": {
+      "distribution_name": "importlib_metadata",
+      "version": "8.9.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "zipp>=3.20",
+          "name": "zipp",
+          "extras": [],
+          "installed_version": "4.1.2",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 16
+    },
+    "joblib": {
+      "distribution_name": "joblib",
+      "version": "1.5.3",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "kiwisolver": {
+      "distribution_name": "kiwisolver",
+      "version": "1.4.9",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "matplotlib": {
+      "distribution_name": "matplotlib",
+      "version": "3.10.8",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "contourpy>=1.0.1",
+          "name": "contourpy",
+          "extras": [],
+          "installed_version": "1.3.3",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "cycler>=0.10",
+          "name": "cycler",
+          "extras": [],
+          "installed_version": "0.12.1",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "fonttools>=4.22.0",
+          "name": "fonttools",
+          "extras": [],
+          "installed_version": "4.61.1",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "kiwisolver>=1.3.1",
+          "name": "kiwisolver",
+          "extras": [],
+          "installed_version": "1.4.9",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "numpy>=1.23",
+          "name": "numpy",
+          "extras": [],
+          "installed_version": "2.3.5",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "packaging>=20.0",
+          "name": "packaging",
+          "extras": [],
+          "installed_version": "25.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pillow>=8",
+          "name": "pillow",
+          "extras": [],
+          "installed_version": "13.0.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pyparsing>=3",
+          "name": "pyparsing",
+          "extras": [],
+          "installed_version": "3.3.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "python-dateutil>=2.7",
+          "name": "python-dateutil",
+          "extras": [],
+          "installed_version": "4.0.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 4
+    },
+    "mlflow-skinny": {
+      "distribution_name": "mlflow-skinny",
+      "version": "3.1.4",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "cachetools<7,>=5.0.0",
+          "name": "cachetools",
+          "extras": [],
+          "installed_version": "6.2.6",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "click<9,>=7.0",
+          "name": "click",
+          "extras": [],
+          "installed_version": "8.5.1",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "cloudpickle<4",
+          "name": "cloudpickle",
+          "extras": [],
+          "installed_version": "3.1.3",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "databricks-sdk<1,>=0.20.0",
+          "name": "databricks-sdk",
+          "extras": [],
+          "installed_version": "0.169.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "fastapi<1",
+          "name": "fastapi",
+          "extras": [],
+          "installed_version": "0.165.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "gitpython<4,>=3.1.9",
+          "name": "gitpython",
+          "extras": [],
+          "installed_version": "3.2.1",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "importlib_metadata!=4.7.0,<9,>=3.7.0",
+          "name": "importlib-metadata",
+          "extras": [],
+          "installed_version": "8.9.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "opentelemetry-api<3,>=1.9.0",
+          "name": "opentelemetry-api",
+          "extras": [],
+          "installed_version": "1.45.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "opentelemetry-sdk<3,>=1.9.0",
+          "name": "opentelemetry-sdk",
+          "extras": [],
+          "installed_version": "1.45.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "packaging<26",
+          "name": "packaging",
+          "extras": [],
+          "installed_version": "25.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "protobuf<7,>=3.12.0",
+          "name": "protobuf",
+          "extras": [],
+          "installed_version": "6.33.6",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pydantic<3,>=1.10.8",
+          "name": "pydantic",
+          "extras": [],
+          "installed_version": "2.14.4",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pyyaml<7,>=5.1",
+          "name": "pyyaml",
+          "extras": [],
+          "installed_version": "6.0.4",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "requests<3,>=2.17.3",
+          "name": "requests",
+          "extras": [],
+          "installed_version": "2.34.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "sqlparse<1,>=0.4.0",
+          "name": "sqlparse",
+          "extras": [],
+          "installed_version": "0.6.1",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "typing-extensions<5,>=4.0.0",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "uvicorn<1",
+          "name": "uvicorn",
+          "extras": [],
+          "installed_version": "0.54.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 37
+    },
+    "numpy": {
+      "distribution_name": "numpy",
+      "version": "2.3.5",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "opentelemetry-api": {
+      "distribution_name": "opentelemetry-api",
+      "version": "1.45.2",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "typing-extensions>=4.5.0",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 0
+    },
+    "opentelemetry-sdk": {
+      "distribution_name": "opentelemetry-sdk",
+      "version": "1.45.2",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "opentelemetry-api==1.45.2",
+          "name": "opentelemetry-api",
+          "extras": [],
+          "installed_version": "1.45.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "opentelemetry-semantic-conventions==0.66b2",
+          "name": "opentelemetry-semantic-conventions",
+          "extras": [],
+          "installed_version": "0.66b2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "typing-extensions>=4.5.0",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 1
+    },
+    "opentelemetry-semantic-conventions": {
+      "distribution_name": "opentelemetry-semantic-conventions",
+      "version": "0.66b2",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "opentelemetry-api==1.45.2",
+          "name": "opentelemetry-api",
+          "extras": [],
+          "installed_version": "1.45.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "typing-extensions>=4.5.0",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 0
+    },
+    "packaging": {
+      "distribution_name": "packaging",
+      "version": "25.0",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "pandas": {
+      "distribution_name": "pandas",
+      "version": "2.2.3",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "numpy>=1.26.0; python_version >= \"3.12\"",
+          "name": "numpy",
+          "extras": [],
+          "installed_version": "2.3.5",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "python-dateutil>=2.8.2",
+          "name": "python-dateutil",
+          "extras": [],
+          "installed_version": "4.0.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pytz>=2020.1",
+          "name": "pytz",
+          "extras": [],
+          "installed_version": "2026.6",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "tzdata>=2022.7",
+          "name": "tzdata",
+          "extras": [],
+          "installed_version": "2026.6",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 81
+    },
+    "pillow": {
+      "distribution_name": "pillow",
+      "version": "13.0.0",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 26
+    },
+    "protobuf": {
+      "distribution_name": "protobuf",
+      "version": "6.33.6",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "pyasn1": {
+      "distribution_name": "pyasn1",
+      "version": "0.6.5",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "pyasn1-modules": {
+      "distribution_name": "pyasn1_modules",
+      "version": "0.4.2",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "pyasn1<0.7.0,>=0.6.1",
+          "name": "pyasn1",
+          "extras": [],
+          "installed_version": "0.6.5",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 0
+    },
+    "pycparser": {
+      "distribution_name": "pycparser",
+      "version": "3.12",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "pydantic": {
+      "distribution_name": "pydantic",
+      "version": "2.14.4",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "annotated-types>=0.6.0",
+          "name": "annotated-types",
+          "extras": [],
+          "installed_version": "0.8.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pydantic-core==2.50.5",
+          "name": "pydantic-core",
+          "extras": [],
+          "installed_version": "2.50.5",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "typing-extensions>=4.16.0",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "typing-inspection>=0.4.4",
+          "name": "typing-inspection",
+          "extras": [],
+          "installed_version": "0.4.5",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 2
+    },
+    "pydantic-core": {
+      "distribution_name": "pydantic_core",
+      "version": "2.50.5",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "typing-extensions>=4.16.0",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 0
+    },
+    "pyparsing": {
+      "distribution_name": "pyparsing",
+      "version": "3.3.2",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 2
+    },
+    "python-dateutil": {
+      "distribution_name": "python-dateutil",
+      "version": "4.0.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "tzdata",
+          "name": "tzdata",
+          "extras": [],
+          "installed_version": "2026.6",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 0
+    },
+    "pytz": {
+      "distribution_name": "pytz",
+      "version": "2026.6",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "pyyaml": {
+      "distribution_name": "PyYAML",
+      "version": "6.0.4",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "requests": {
+      "distribution_name": "requests",
+      "version": "2.34.2",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "charset_normalizer<4,>=2",
+          "name": "charset-normalizer",
+          "extras": [],
+          "installed_version": "3.5.2",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "idna<4,>=2.5",
+          "name": "idna",
+          "extras": [],
+          "installed_version": "3.20",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "urllib3<3,>=1.26",
+          "name": "urllib3",
+          "extras": [],
+          "installed_version": "2.8.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "certifi>=2023.5.7",
+          "name": "certifi",
+          "extras": [],
+          "installed_version": "2026.11.20",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 2
+    },
+    "scikit-learn": {
+      "distribution_name": "scikit-learn",
+      "version": "1.8.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "numpy>=1.24.1",
+          "name": "numpy",
+          "extras": [],
+          "installed_version": "2.3.5",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "scipy>=1.10.0",
+          "name": "scipy",
+          "extras": [],
+          "installed_version": "1.17.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "joblib>=1.3.0",
+          "name": "joblib",
+          "extras": [],
+          "installed_version": "1.5.3",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "threadpoolctl>=3.2.0",
+          "name": "threadpoolctl",
+          "extras": [],
+          "installed_version": "3.6.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 49
+    },
+    "scipy": {
+      "distribution_name": "scipy",
+      "version": "1.17.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "numpy<2.7,>=1.26.4",
+          "name": "numpy",
+          "extras": [],
+          "installed_version": "2.3.5",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 37
+    },
+    "seaborn": {
+      "distribution_name": "seaborn",
+      "version": "0.13.2",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "numpy>=1.20,!=1.24.0",
+          "name": "numpy",
+          "extras": [],
+          "installed_version": "2.3.5",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "pandas>=1.2",
+          "name": "pandas",
+          "extras": [],
+          "installed_version": "2.2.3",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "matplotlib>=3.4,!=3.6.1",
+          "name": "matplotlib",
+          "extras": [],
+          "installed_version": "3.10.8",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 19
+    },
+    "smmap": {
+      "distribution_name": "smmap",
+      "version": "5.0.3",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "sqlparse": {
+      "distribution_name": "sqlparse",
+      "version": "0.6.1",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 3
+    },
+    "starlette": {
+      "distribution_name": "starlette",
+      "version": "1.10.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "anyio<5,>=4.0.0",
+          "name": "anyio",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "typing-extensions>=4.10.0; python_version < '3.13'",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 7
+    },
+    "threadpoolctl": {
+      "distribution_name": "threadpoolctl",
+      "version": "3.6.0",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "typing-extensions": {
+      "distribution_name": "typing_extensions",
+      "version": "4.16.0",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "typing-inspection": {
+      "distribution_name": "typing-inspection",
+      "version": "0.4.5",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "typing-extensions>=4.15.0",
+          "name": "typing-extensions",
+          "extras": [],
+          "installed_version": "4.16.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 0
+    },
+    "tzdata": {
+      "distribution_name": "tzdata",
+      "version": "2026.6",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 0
+    },
+    "urllib3": {
+      "distribution_name": "urllib3",
+      "version": "2.8.0",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 5
+    },
+    "uvicorn": {
+      "distribution_name": "uvicorn",
+      "version": "0.54.0",
+      "requested_extras": [],
+      "requires": [
+        {
+          "declaration": "click>=7.0",
+          "name": "click",
+          "extras": [],
+          "installed_version": "8.5.1",
+          "specifier_satisfied": true
+        },
+        {
+          "declaration": "h11>=0.8",
+          "name": "h11",
+          "extras": [],
+          "installed_version": "0.16.0",
+          "specifier_satisfied": true
+        }
+      ],
+      "inactive_requirement_count": 7
+    },
+    "zipp": {
+      "distribution_name": "zipp",
+      "version": "4.1.2",
+      "requested_extras": [],
+      "requires": [],
+      "inactive_requirement_count": 18
+    }
+  },
+  "validation": {
+    "all_declared_requirements_satisfied": true,
+    "recorded_result_environment_matches": true,
+    "recorded_result_environment_comparison": {
+      "python": {
+        "recorded": "3.12.14",
+        "observed": "3.12.14",
+        "matches": true
+      },
+      "numpy": {
+        "recorded": "2.3.5",
+        "observed": "2.3.5",
+        "matches": true
+      },
+      "pandas": {
+        "recorded": "2.2.3",
+        "observed": "2.2.3",
+        "matches": true
+      },
+      "scikit-learn": {
+        "recorded": "1.8.0",
+        "observed": "1.8.0",
+        "matches": true
+      },
+      "matplotlib": {
+        "recorded": "3.10.8",
+        "observed": "3.10.8",
+        "matches": true
+      },
+      "seaborn": {
+        "recorded": "0.13.2",
+        "observed": "0.13.2",
+        "matches": true
+      },
+      "pydantic": {
+        "recorded": "2.14.4",
+        "observed": "2.14.4",
+        "matches": true
+      },
+      "mlflow-skinny": {
+        "recorded": "3.1.4",
+        "observed": "3.1.4",
+        "matches": true
+      },
+      "PyYAML": {
+        "recorded": "6.0.4",
+        "observed": "6.0.4",
+        "matches": true
+      }
+    },
+    "missing": {},
+    "conflicts": []
+  },
+  "reproduction_limits": [
+    "This records the current state of the same interpreter used for the referenced run; it does not modify the original result or MLflow record.",
+    "The complete runtime closure is selected for the recorded Linux/Python marker environment, not a cross-platform lock.",
+    "The clean-install environment is recorded separately in local_checks.json and requirements-lock.txt.",
+    "Exact metrics were compared only between repeated runs in the original environment; no cross-environment metric equivalence is asserted.",
+    "System libraries, CPU and BLAS implementation may affect numerical reproduction despite matching Python package versions."
+  ]
+}
