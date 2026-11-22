@@ -1,0 +1,60 @@
+name: LAB1 quality
+
+on:
+  push:
+    branches: [main, develop, 'feature/**', 'fix/**']
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      MPLBACKEND: Agg
+      PYTHONHASHSEED: '42'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install exact project dependencies
+        run: python -m pip install -e '.[dev]'
+      - name: Pre-commit checks
+        run: python -m pre_commit run --all-files --show-diff-on-failure
+      - name: Verify original data
+        run: python -m calibration_lab.cli verify --config configs/lab1.yaml
+      - name: Test suite
+        run: python -m pytest -q
+      - name: Three actually blocked Git commits
+        run: python scripts/negative_controls.py
+      - name: Detect intentionally tampered raw data
+        run: python -m calibration_lab.cli tamper --config configs/lab1.yaml
+      - name: EDA and logged calibration demonstration
+        run: python -m calibration_lab.cli eda --config configs/lab1.yaml
+      - name: Repeat EDA and compare deterministic results
+        run: python -m calibration_lab.cli reproduce --config configs/lab1.yaml
+      - name: Preserve verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lab1-check-evidence
+          path: |
+            reports/LAB1/
+            mlruns/
+          retention-days: 14
+          if-no-files-found: warn
+
