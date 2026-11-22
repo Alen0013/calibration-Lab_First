@@ -31,8 +31,8 @@
       "sha256": "d5def725be26b6dc238a03e643f4ffb8f8f435ef9b714dcb8fca99a7c7dc1d95"
     },
     "README.md": {
-      "size_bytes": 16552,
-      "sha256": "0be585c8648bcf29965ad2fa1b9b3948d32d9edd0b88794e5f23ed33417e2044"
+      "size_bytes": 14902,
+      "sha256": "165a27ba9b642781b0ccbb13a0792c172509a58fc13bd9bb68a69f82157e9f0f"
     },
     "configs/lab1.yaml": {
       "size_bytes": 326,
