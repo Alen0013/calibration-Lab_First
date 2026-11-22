@@ -741,7 +741,7 @@ def ensure_pull_request(github: Github, head: str, output: Path) -> dict:
             "## Проверка\n\nWorkflow ci.yml запускает pre-commit, pytest, негативные контроли, проверку SHA-256, EDA и повтор. "
             "Фактический серверный результат проверяется до слияния.\n\n"
             f"Коммит develop: `{head}`.\n\n"
-            "## Процесс\n\nПубликацию выполняет владелец через GitHub CLI. Использование ИИ раскрыто в defense_checklist.md. "
+            "## Процесс\n\nПубликацию выполняет владелец через GitHub CLI. Использование ИИ раскрыто в README.md. "
             "Внешнее человеческое ревью этим описанием не подтверждается.\n",
             encoding="utf-8",
         )

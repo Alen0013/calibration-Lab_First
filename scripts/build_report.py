@@ -358,7 +358,7 @@ def build(root: Path) -> tuple[Path, Path]:
     report.p(
         "ИИ использован при разработке кода, проверок и черновиков документации. "
         "Экспериментальные числа получены исполнением кода. Подробное раскрытие содержится "
-        "в defense_checklist.md; рецензия БЯМ носит совещательный характер.",
+        "в README.md; рецензия БЯМ носит совещательный характер.",
         small=True,
     )
 
@@ -780,7 +780,7 @@ def build(root: Path) -> tuple[Path, Path]:
             ["Блокировки коммитов", "precommit_config.yaml, precommit_block.log"],
             ["Подмена и повторение", "hash_tamper.*, reproducibility.*"],
             ["Подготовка к защите", "docs/defense_notes.md, docs/video_script.md"],
-            ["Раскрытие ИИ", "defense_checklist.md"],
+            ["Раскрытие ИИ", "README.md"],
         ],
         [2.0, 4.85],
     )
