@@ -11,8 +11,8 @@
       "sha256": "2e3dfa43f2fd90689665a423bb42f4c341a8c11bdda23ae9cdb48b20097fe1ca"
     },
     ".github/pull_request_template.md": {
-      "size_bytes": 1421,
-      "sha256": "c51c66f67139dc44fbd4d4d8101d16ce3a9654a98089086bc513c8bcd13fbcf3"
+      "size_bytes": 1410,
+      "sha256": "1a185fae11459a09cfe1f7a955dc6593447d07494cf9785931576f5a7aa4c733"
     },
     ".github/workflows/ci.yml": {
       "size_bytes": 3921,
@@ -31,12 +31,8 @@
       "sha256": "d5def725be26b6dc238a03e643f4ffb8f8f435ef9b714dcb8fca99a7c7dc1d95"
     },
     "README.md": {
-      "size_bytes": 15013,
-      "sha256": "24248130def12219da0219282247fcf891151c35b4ae48bc7ac92e476d4e9159"
-    },
-    "START_HERE.txt": {
-      "size_bytes": 2285,
-      "sha256": "a189d3e10d94e10143f188f488aac8328a024a348f4e35cb67f3b26f3b6afccd"
+      "size_bytes": 16552,
+      "sha256": "0be585c8648bcf29965ad2fa1b9b3948d32d9edd0b88794e5f23ed33417e2044"
     },
     "configs/lab1.yaml": {
       "size_bytes": 326,
@@ -45,10 +41,6 @@
     "data/raw/breast_cancer.csv": {
       "size_bytes": 119913,
       "sha256": "fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed"
-    },
-    "defense_checklist.md": {
-      "size_bytes": 5770,
-      "sha256": "7a4b7405f4c931f199eec32e428ed272060cd16fa06850c91ac20c482aa7d632"
     },
     "docs/defense_notes.md": {
       "size_bytes": 13373,
@@ -67,8 +59,8 @@
       "sha256": "8ee99b3e3e48c5beeefbf51b01361577b89deca1e86b1042e4cdfc555048767b"
     },
     "docs/requirements.md": {
-      "size_bytes": 7849,
-      "sha256": "11d4d1a00df2c115ae6914473ce461ab5371a18524a0149cce3e6a0cc1be4f64"
+      "size_bytes": 7838,
+      "sha256": "d4f5cd3a6f83666f60e4c67df2b26157ddb3db612fa7b3aa86dfc877a5a76936"
     },
     "docs/sources.md": {
       "size_bytes": 4742,
@@ -195,16 +187,16 @@
       "sha256": "e78e6106b18c6094fea62cbed52298804cc417b1731d9f5d4d635d03d081275c"
     },
     "reports/LAB1/lab1_report.docx": {
-      "size_bytes": 439223,
-      "sha256": "10a9e5b2c46e8289ed1c18984a7e97bd0ab0672d797af701f347149f8775bbe6"
+      "size_bytes": 439212,
+      "sha256": "b36d01f02545d1099c9b501ec36aa659e434abab6358aa6b69b46f4ebf1685dd"
     },
     "reports/LAB1/lab1_report.md": {
-      "size_bytes": 25774,
-      "sha256": "7755544ce7280947a2492afb6479f3262a6f596160a7c6abe920634e7a46348f"
+      "size_bytes": 25752,
+      "sha256": "33745cb0d6df9c0b2c07942db027505e0956f43287cf4ac9e23598adbf9d9959"
     },
     "reports/LAB1/llm_review.md": {
-      "size_bytes": 10231,
-      "sha256": "9c8f7df58eca9afaeca8a015990255f0fbda5346f6fa0f49b9a3e861e69a07d5"
+      "size_bytes": 10258,
+      "sha256": "67d13c265a2955ab786faa6a7e0479c8338450e719c76a80a6b85a01903f2a8e"
     },
     "reports/LAB1/local_checks.json": {
       "size_bytes": 3797,
@@ -271,8 +263,8 @@
       "sha256": "7a77d646ad998a1f413ecaa7bdafa80af968d0ec951c0b503e6b6a9c2823f1e1"
     },
     "scripts/build_report.py": {
-      "size_bytes": 48171,
-      "sha256": "1ac187bdb08ce154d7ea6749d0eee62eecd07929fea193516f0c9828dde445c5"
+      "size_bytes": 48149,
+      "sha256": "ff1cb2576dc510eaa281e35367d6f70afeebc5b6662c510264fc131285c81d2f"
     },
     "scripts/check_repo.py": {
       "size_bytes": 1420,
@@ -287,8 +279,8 @@
       "sha256": "5d8626ea62b9fd82073bc70e97deed484c1e6c309809a5d255e8a9d0f56c6211"
     },
     "scripts/publish_github.py": {
-      "size_bytes": 48287,
-      "sha256": "b0b045fa998bfe020f528191daede53575ef2eb4229657cfa665942fdfac2dc3"
+      "size_bytes": 48276,
+      "sha256": "0ef50fa55d3fab6da168dcc9cca41cb2d4c4cc6a06cfedccfd546ab0f53ba38a"
     },
     "scripts/record_cli_demo.py": {
       "size_bytes": 12789,
