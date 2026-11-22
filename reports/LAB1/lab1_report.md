@@ -111,9 +111,9 @@ ECE рассчитана по 10 равным интервалам вероят�
 
 ## Git и негативные контроли
 
-Локальные ветки на момент сборки отчёта: `develop`, `feature/lab1-app`, `feature/lab1-delivery`, `feature/lab1-eda`, `feature/lab1-evidence`, `feature/lab1-quality`, `main`.
+Локальные ветки на момент сборки отчёта: `develop`, `feature/lab1-app`, `feature/lab1-delivery`, `feature/lab1-eda`, `feature/lab1-evidence`, `feature/lab1-publish`, `feature/lab1-quality`, `main`.
 
-Подготовлены .gitignore, .gitattributes, шаблон PR и workflow с проверкой quality. Работа интегрируется в develop; main содержит начальную основу до принятия изменений через PR. Pre-commit запускает Ruff, проверку индекса на известные шаблоны секретов, ограничение размера и быстрые проверки синтаксиса. Локальный хук дополняется серверным CI [E5, S5].
+Подготовлены .gitignore, .gitattributes, шаблон PR и workflow с проверкой quality. Локальный develop содержит готовый код; локальный main — начальную основу. Удалённый main рассматривается отдельно. Pre-commit запускает Ruff, проверку индекса на известные шаблоны секретов, ограничение размера и быстрые проверки синтаксиса. Для серверного CI подготовлен отдельный workflow [E5, S5].
 
 | Контроль | Код git commit | HEAD прежний | Блокировка |
 | --- | --- | --- | --- |
@@ -137,7 +137,9 @@ ECE рассчитана по 10 равным интервалам вероят�
 
 Успешных автоматических тестов: 27. Локальный pre-commit: Подтверждено. Источник — local_checks.json и журналы локальной проверки [E8].
 
-Удалённый репозиторий: Нет сохранённого подтверждения; GitHub Actions: Нет сохранённого подтверждения; защита main: Нет сохранённого подтверждения. До их подтверждения удалённая часть задания остаётся незавершённой. Конфигурация .github/branch_protection.json сама по себе защиту не включает [S6].
+Репозиторий https://github.com/Alen0013/calibration-lab1 создан. Публикация кода: не подтверждена; GitHub Actions: Нет сохранённого подтверждения; защита удалённого main: не подтверждена. Источник — github_status.json [E10].
+
+Запись через интеграцию отклонена с кодом HTTP 403. Удалённый main содержит начальный README. Для продолжения на компьютере владельца подготовлен PUBLISH_GITHUB.bat с авторизацией в браузере; его публикация ещё не выполнена. После запуска результат фиксируется в artifacts/github_publication.json. Конфигурация защиты сама по себе не включает правила GitHub [E10, S6].
 
 ## Выводы
 
@@ -173,7 +175,7 @@ requirements-lock.txt относится к независимой чистой 
 | joblib | 1.5.3 | 1.6.0 |
 | threadpoolctl | 3.6.0 | 3.8.0 |
 
-E1 — results.json, основной MLflow run_id указан в шапке. E2 — eda_stats.csv. E3 — src/calibration_lab/analysis.py и создаваемые CSV. E4 — configs/lab1.yaml и config_snapshot.json. E5 — scripts/negative_controls.py, precommit_controls.json, precommit_block.log. E6 — reproducibility.json и reproducibility.log, команда reproduce. E7 — src/calibration_lab/data.py, hash_tamper.json и hash_tamper.log. E8 — local_checks.json, app_smoke.json и журналы проверки. Пути JSON, CSV и журналов, если не указано иное, относительны reports/LAB1/. E9 — run_environment.json и requirements-run.txt; requirements-lock.txt описывает другую, чистую среду установки.
+E1 — results.json, основной MLflow run_id указан в шапке. E2 — eda_stats.csv. E3 — src/calibration_lab/analysis.py и создаваемые CSV. E4 — configs/lab1.yaml и config_snapshot.json. E5 — scripts/negative_controls.py, precommit_controls.json, precommit_block.log. E6 — reproducibility.json и reproducibility.log, команда reproduce. E7 — src/calibration_lab/data.py, hash_tamper.json и hash_tamper.log. E8 — local_checks.json, app_smoke.json и журналы проверки. Пути JSON, CSV и журналов, если не указано иное, относительны reports/LAB1/. E9 — run_environment.json и requirements-run.txt; requirements-lock.txt описывает другую, чистую среду установки. E10 — github_status.json, состояние удалённого репозитория на момент проверки.
 
 ## Источники и комплект сдачи
 
@@ -214,4 +216,4 @@ HTTP-проверки работающего процесса приложени
 
 ## Действия перед окончательной сдачей
 
-Нужно указать реальные сведения об авторе, подтвердить публикацию и защиту main, приложить успешный серверный запуск CI и оформить необходимое ревью. Обучающийся проверяет демонстрацию и составляет собственный критический комментарий к рецензии. Эти действия не подменяются локальным конфигурационным файлом или подготовленным шаблоном.
+Нужно указать реальные сведения об авторе, подтвердить публикацию и защиту main, приложить успешный серверный запуск CI и оформить необходимое ревью. Обучающийся проверяет демонстрацию и составляет собственный критический комментарий к рецензии. Для публикации предусмотрен PUBLISH_GITHUB.bat; точный адрес, порядок входа и проверка результата описаны в docs/publish_github.md. Наличие сценария не подтверждает его исполнение.

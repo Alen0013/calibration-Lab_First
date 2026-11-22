@@ -561,9 +561,10 @@ def build(root: Path) -> tuple[Path, Path]:
     )
     report.p(
         "Подготовлены .gitignore, .gitattributes, шаблон PR и workflow с проверкой quality. "
-        "Работа интегрируется в develop; main содержит начальную основу до принятия изменений "
-        "через PR. Pre-commit запускает Ruff, проверку индекса на известные шаблоны секретов, "
-        "ограничение размера и быстрые проверки синтаксиса. Локальный хук дополняется серверным CI [E5, S5]."
+        "Локальный develop содержит готовый код; локальный main — начальную основу. "
+        "Удалённый main рассматривается отдельно. Pre-commit запускает Ruff, проверку индекса "
+        "на известные шаблоны секретов, ограничение размера и быстрые проверки синтаксиса. "
+        "Для серверного CI подготовлен отдельный workflow [E5, S5]."
     )
     labels = {
         "style": "Нарушение стиля",
@@ -624,13 +625,32 @@ def build(root: Path) -> tuple[Path, Path]:
         + ". "
         "Источник — local_checks.json и журналы локальной проверки [E8]."
     )
-    report.p(
-        "Удалённый репозиторий: " + status(remote.get("published")) + "; "
-        "GitHub Actions: " + status(remote.get("ci_passed")) + "; "
-        "защита main: " + status(remote.get("main_protected")) + ". "
-        "До их подтверждения удалённая часть задания остаётся незавершённой. "
-        "Конфигурация .github/branch_protection.json сама по себе защиту не включает [S6]."
+    remote_created = (
+        "создан" if remote.get("repository_created") is True else "создание не подтверждено"
     )
+    publication = "подтверждена" if remote.get("published") is True else "не подтверждена"
+    protection = "подтверждена" if remote.get("main_protected") is True else "не подтверждена"
+    report.p(
+        f"Репозиторий {remote.get('repository_url', 'URL не сохранён')} {remote_created}. "
+        f"Публикация кода: {publication}; GitHub Actions: {status(remote.get('ci_passed'))}; "
+        f"защита удалённого main: {protection}. Источник — github_status.json [E10].",
+        small=True,
+    )
+    if remote.get("published") is not True:
+        write_code = remote.get("write_attempt", {}).get("http_status")
+        failure = (
+            f"Запись через интеграцию отклонена с кодом HTTP {write_code}. "
+            if write_code is not None
+            else "Удалённая загрузка не подтверждена. "
+        )
+        report.p(
+            failure
+            + "Удалённый main содержит начальный README. Для продолжения на компьютере владельца "
+            "подготовлен PUBLISH_GITHUB.bat с авторизацией в браузере; его публикация ещё не выполнена. "
+            "После запуска результат фиксируется в artifacts/github_publication.json. "
+            "Конфигурация защиты сама по себе не включает правила GitHub [E10, S6].",
+            small=True,
+        )
 
     # Page 7: conclusions, reproducible entry points and evidence map.
     report.page()
@@ -706,7 +726,8 @@ def build(root: Path) -> tuple[Path, Path]:
         "E7 — src/calibration_lab/data.py, hash_tamper.json и hash_tamper.log. "
         "E8 — local_checks.json, app_smoke.json и журналы проверки. Пути JSON, CSV и журналов, если не указано иное, "
         "относительны reports/LAB1/. E9 — run_environment.json и requirements-run.txt; "
-        "requirements-lock.txt описывает другую, чистую среду установки.",
+        "requirements-lock.txt описывает другую, чистую среду установки. "
+        "E10 — github_status.json, состояние удалённого репозитория на момент проверки.",
         small=True,
     )
 
@@ -786,7 +807,8 @@ def build(root: Path) -> tuple[Path, Path]:
         "Нужно указать реальные сведения об авторе, подтвердить публикацию и защиту main, "
         "приложить успешный серверный запуск CI и оформить необходимое ревью. Обучающийся "
         "проверяет демонстрацию и составляет собственный критический комментарий к рецензии. "
-        "Эти действия не подменяются локальным конфигурационным файлом или подготовленным шаблоном."
+        "Для публикации предусмотрен PUBLISH_GITHUB.bat; точный адрес, порядок входа и проверка "
+        "результата описаны в docs/publish_github.md. Наличие сценария не подтверждает его исполнение."
     )
     markdown, word = output / "lab1_report.md", output / "lab1_report.docx"
     report.write_markdown(markdown)
