@@ -1,0 +1,455 @@
+section,name,metric,value
+dataset,all,rows,569
+dataset,all,features,30
+dataset,all,missing_values,0
+dataset,all,duplicate_rows,0
+dataset,all,duplicate_feature_rows,0
+dataset,all,negative_values,0
+dataset,all,zero_values,78
+dataset,all,nonfinite_values,0
+dataset,all,outlier_cells,608
+dataset,all,outlier_rows,171
+dataset,all,maximum_abs_correlation,0.997855281493811
+dataset,all,correlation_pair_value,0.997855281493811
+classes,benign,count,357
+classes,benign,share,0.627416520210896
+classes,malignant,count,212
+classes,malignant,share,0.372583479789104
+feature,mean radius,count,569
+feature,mean radius,missing,0
+feature,mean radius,negative,0
+feature,mean radius,zero,0
+feature,mean radius,mean,14.1272917398946
+feature,mean radius,std,3.52404882621208
+feature,mean radius,min,6.981
+feature,mean radius,q1,11.7
+feature,mean radius,median,13.37
+feature,mean radius,q3,15.78
+feature,mean radius,max,28.11
+feature,mean radius,iqr_lower,5.58
+feature,mean radius,iqr_upper,21.9
+feature,mean radius,iqr_outliers,14
+feature,mean texture,count,569
+feature,mean texture,missing,0
+feature,mean texture,negative,0
+feature,mean texture,zero,0
+feature,mean texture,mean,19.2896485061511
+feature,mean texture,std,4.30103576816695
+feature,mean texture,min,9.71
+feature,mean texture,q1,16.17
+feature,mean texture,median,18.84
+feature,mean texture,q3,21.8
+feature,mean texture,max,39.28
+feature,mean texture,iqr_lower,7.725
+feature,mean texture,iqr_upper,30.245
+feature,mean texture,iqr_outliers,7
+feature,mean perimeter,count,569
+feature,mean perimeter,missing,0
+feature,mean perimeter,negative,0
+feature,mean perimeter,zero,0
+feature,mean perimeter,mean,91.9690333919156
+feature,mean perimeter,std,24.2989810387549
+feature,mean perimeter,min,43.79
+feature,mean perimeter,q1,75.17
+feature,mean perimeter,median,86.24
+feature,mean perimeter,q3,104.1
+feature,mean perimeter,max,188.5
+feature,mean perimeter,iqr_lower,31.775
+feature,mean perimeter,iqr_upper,147.495
+feature,mean perimeter,iqr_outliers,13
+feature,mean area,count,569
+feature,mean area,missing,0
+feature,mean area,negative,0
+feature,mean area,zero,0
+feature,mean area,mean,654.889103690685
+feature,mean area,std,351.914129181653
+feature,mean area,min,143.5
+feature,mean area,q1,420.3
+feature,mean area,median,551.1
+feature,mean area,q3,782.7
+feature,mean area,max,2501
+feature,mean area,iqr_lower,-123.3
+feature,mean area,iqr_upper,1326.3
+feature,mean area,iqr_outliers,25
+feature,mean smoothness,count,569
+feature,mean smoothness,missing,0
+feature,mean smoothness,negative,0
+feature,mean smoothness,zero,0
+feature,mean smoothness,mean,0.0963602811950791
+feature,mean smoothness,std,0.0140641281376736
+feature,mean smoothness,min,0.05263
+feature,mean smoothness,q1,0.08637
+feature,mean smoothness,median,0.09587
+feature,mean smoothness,q3,0.1053
+feature,mean smoothness,max,0.1634
+feature,mean smoothness,iqr_lower,0.057975
+feature,mean smoothness,iqr_upper,0.133695
+feature,mean smoothness,iqr_outliers,6
+feature,mean compactness,count,569
+feature,mean compactness,missing,0
+feature,mean compactness,negative,0
+feature,mean compactness,zero,0
+feature,mean compactness,mean,0.104340984182777
+feature,mean compactness,std,0.0528127579325122
+feature,mean compactness,min,0.01938
+feature,mean compactness,q1,0.06492
+feature,mean compactness,median,0.09263
+feature,mean compactness,q3,0.1304
+feature,mean compactness,max,0.3454
+feature,mean compactness,iqr_lower,-0.0333
+feature,mean compactness,iqr_upper,0.22862
+feature,mean compactness,iqr_outliers,16
+feature,mean concavity,count,569
+feature,mean concavity,missing,0
+feature,mean concavity,negative,0
+feature,mean concavity,zero,13
+feature,mean concavity,mean,0.0887993158172232
+feature,mean concavity,std,0.0797198087078935
+feature,mean concavity,min,0
+feature,mean concavity,q1,0.02956
+feature,mean concavity,median,0.06154
+feature,mean concavity,q3,0.1307
+feature,mean concavity,max,0.4268
+feature,mean concavity,iqr_lower,-0.12215
+feature,mean concavity,iqr_upper,0.28241
+feature,mean concavity,iqr_outliers,18
+feature,mean concave points,count,569
+feature,mean concave points,missing,0
+feature,mean concave points,negative,0
+feature,mean concave points,zero,13
+feature,mean concave points,mean,0.0489191458699473
+feature,mean concave points,std,0.0388028448591536
+feature,mean concave points,min,0
+feature,mean concave points,q1,0.02031
+feature,mean concave points,median,0.0335
+feature,mean concave points,q3,0.074
+feature,mean concave points,max,0.2012
+feature,mean concave points,iqr_lower,-0.060225
+feature,mean concave points,iqr_upper,0.154535
+feature,mean concave points,iqr_outliers,10
+feature,mean symmetry,count,569
+feature,mean symmetry,missing,0
+feature,mean symmetry,negative,0
+feature,mean symmetry,zero,0
+feature,mean symmetry,mean,0.181161862917399
+feature,mean symmetry,std,0.0274142813360357
+feature,mean symmetry,min,0.106
+feature,mean symmetry,q1,0.1619
+feature,mean symmetry,median,0.1792
+feature,mean symmetry,q3,0.1957
+feature,mean symmetry,max,0.304
+feature,mean symmetry,iqr_lower,0.1112
+feature,mean symmetry,iqr_upper,0.2464
+feature,mean symmetry,iqr_outliers,15
+feature,mean fractal dimension,count,569
+feature,mean fractal dimension,missing,0
+feature,mean fractal dimension,negative,0
+feature,mean fractal dimension,zero,0
+feature,mean fractal dimension,mean,0.0627976098418278
+feature,mean fractal dimension,std,0.00706036279508446
+feature,mean fractal dimension,min,0.04996
+feature,mean fractal dimension,q1,0.0577
+feature,mean fractal dimension,median,0.06154
+feature,mean fractal dimension,q3,0.06612
+feature,mean fractal dimension,max,0.09744
+feature,mean fractal dimension,iqr_lower,0.04507
+feature,mean fractal dimension,iqr_upper,0.07875
+feature,mean fractal dimension,iqr_outliers,15
+feature,radius error,count,569
+feature,radius error,missing,0
+feature,radius error,negative,0
+feature,radius error,zero,0
+feature,radius error,mean,0.405172056239016
+feature,radius error,std,0.277312732986104
+feature,radius error,min,0.1115
+feature,radius error,q1,0.2324
+feature,radius error,median,0.3242
+feature,radius error,q3,0.4789
+feature,radius error,max,2.873
+feature,radius error,iqr_lower,-0.13735
+feature,radius error,iqr_upper,0.84865
+feature,radius error,iqr_outliers,38
+feature,texture error,count,569
+feature,texture error,missing,0
+feature,texture error,negative,0
+feature,texture error,zero,0
+feature,texture error,mean,1.21685342706503
+feature,texture error,std,0.551648392617202
+feature,texture error,min,0.3602
+feature,texture error,q1,0.8339
+feature,texture error,median,1.108
+feature,texture error,q3,1.474
+feature,texture error,max,4.885
+feature,texture error,iqr_lower,-0.12625
+feature,texture error,iqr_upper,2.43415
+feature,texture error,iqr_outliers,20
+feature,perimeter error,count,569
+feature,perimeter error,missing,0
+feature,perimeter error,negative,0
+feature,perimeter error,zero,0
+feature,perimeter error,mean,2.86605922671353
+feature,perimeter error,std,2.02185455404211
+feature,perimeter error,min,0.757
+feature,perimeter error,q1,1.606
+feature,perimeter error,median,2.287
+feature,perimeter error,q3,3.357
+feature,perimeter error,max,21.98
+feature,perimeter error,iqr_lower,-1.0205
+feature,perimeter error,iqr_upper,5.9835
+feature,perimeter error,iqr_outliers,38
+feature,area error,count,569
+feature,area error,missing,0
+feature,area error,negative,0
+feature,area error,zero,0
+feature,area error,mean,40.337079086116
+feature,area error,std,45.4910055161318
+feature,area error,min,6.802
+feature,area error,q1,17.85
+feature,area error,median,24.53
+feature,area error,q3,45.19
+feature,area error,max,542.2
+feature,area error,iqr_lower,-23.16
+feature,area error,iqr_upper,86.2
+feature,area error,iqr_outliers,65
+feature,smoothness error,count,569
+feature,smoothness error,missing,0
+feature,smoothness error,negative,0
+feature,smoothness error,zero,0
+feature,smoothness error,mean,0.00704097891036907
+feature,smoothness error,std,0.00300251794383907
+feature,smoothness error,min,0.001713
+feature,smoothness error,q1,0.005169
+feature,smoothness error,median,0.00638
+feature,smoothness error,q3,0.008146
+feature,smoothness error,max,0.03113
+feature,smoothness error,iqr_lower,0.000703499999999999
+feature,smoothness error,iqr_upper,0.0126115
+feature,smoothness error,iqr_outliers,30
+feature,compactness error,count,569
+feature,compactness error,missing,0
+feature,compactness error,negative,0
+feature,compactness error,zero,0
+feature,compactness error,mean,0.0254781388400703
+feature,compactness error,std,0.0179081793256774
+feature,compactness error,min,0.002252
+feature,compactness error,q1,0.01308
+feature,compactness error,median,0.02045
+feature,compactness error,q3,0.03245
+feature,compactness error,max,0.1354
+feature,compactness error,iqr_lower,-0.015975
+feature,compactness error,iqr_upper,0.061505
+feature,compactness error,iqr_outliers,28
+feature,concavity error,count,569
+feature,concavity error,missing,0
+feature,concavity error,negative,0
+feature,concavity error,zero,13
+feature,concavity error,mean,0.031893716344464
+feature,concavity error,std,0.0301860603229884
+feature,concavity error,min,0
+feature,concavity error,q1,0.01509
+feature,concavity error,median,0.02589
+feature,concavity error,q3,0.04205
+feature,concavity error,max,0.396
+feature,concavity error,iqr_lower,-0.02535
+feature,concavity error,iqr_upper,0.08249
+feature,concavity error,iqr_outliers,22
+feature,concave points error,count,569
+feature,concave points error,missing,0
+feature,concave points error,negative,0
+feature,concave points error,zero,13
+feature,concave points error,mean,0.0117961370826011
+feature,concave points error,std,0.00617028517404687
+feature,concave points error,min,0
+feature,concave points error,q1,0.007638
+feature,concave points error,median,0.01093
+feature,concave points error,q3,0.01471
+feature,concave points error,max,0.05279
+feature,concave points error,iqr_lower,-0.00297
+feature,concave points error,iqr_upper,0.025318
+feature,concave points error,iqr_outliers,19
+feature,symmetry error,count,569
+feature,symmetry error,missing,0
+feature,symmetry error,negative,0
+feature,symmetry error,zero,0
+feature,symmetry error,mean,0.0205422987697715
+feature,symmetry error,std,0.0082663715287984
+feature,symmetry error,min,0.007882
+feature,symmetry error,q1,0.01516
+feature,symmetry error,median,0.01873
+feature,symmetry error,q3,0.02348
+feature,symmetry error,max,0.07895
+feature,symmetry error,iqr_lower,0.00268
+feature,symmetry error,iqr_upper,0.03596
+feature,symmetry error,iqr_outliers,27
+feature,fractal dimension error,count,569
+feature,fractal dimension error,missing,0
+feature,fractal dimension error,negative,0
+feature,fractal dimension error,zero,0
+feature,fractal dimension error,mean,0.00379490386643234
+feature,fractal dimension error,std,0.0026460709670892
+feature,fractal dimension error,min,0.0008948
+feature,fractal dimension error,q1,0.002248
+feature,fractal dimension error,median,0.003187
+feature,fractal dimension error,q3,0.004558
+feature,fractal dimension error,max,0.02984
+feature,fractal dimension error,iqr_lower,-0.001217
+feature,fractal dimension error,iqr_upper,0.008023
+feature,fractal dimension error,iqr_outliers,28
+feature,worst radius,count,569
+feature,worst radius,missing,0
+feature,worst radius,negative,0
+feature,worst radius,zero,0
+feature,worst radius,mean,16.2691898066784
+feature,worst radius,std,4.83324158046932
+feature,worst radius,min,7.93
+feature,worst radius,q1,13.01
+feature,worst radius,median,14.97
+feature,worst radius,q3,18.79
+feature,worst radius,max,36.04
+feature,worst radius,iqr_lower,4.34
+feature,worst radius,iqr_upper,27.46
+feature,worst radius,iqr_outliers,17
+feature,worst texture,count,569
+feature,worst texture,missing,0
+feature,worst texture,negative,0
+feature,worst texture,zero,0
+feature,worst texture,mean,25.677223198594
+feature,worst texture,std,6.14625762303832
+feature,worst texture,min,12.02
+feature,worst texture,q1,21.08
+feature,worst texture,median,25.41
+feature,worst texture,q3,29.72
+feature,worst texture,max,49.54
+feature,worst texture,iqr_lower,8.12
+feature,worst texture,iqr_upper,42.68
+feature,worst texture,iqr_outliers,5
+feature,worst perimeter,count,569
+feature,worst perimeter,missing,0
+feature,worst perimeter,negative,0
+feature,worst perimeter,zero,0
+feature,worst perimeter,mean,107.261212653779
+feature,worst perimeter,std,33.6025422690364
+feature,worst perimeter,min,50.41
+feature,worst perimeter,q1,84.11
+feature,worst perimeter,median,97.66
+feature,worst perimeter,q3,125.4
+feature,worst perimeter,max,251.2
+feature,worst perimeter,iqr_lower,22.175
+feature,worst perimeter,iqr_upper,187.335
+feature,worst perimeter,iqr_outliers,15
+feature,worst area,count,569
+feature,worst area,missing,0
+feature,worst area,negative,0
+feature,worst area,zero,0
+feature,worst area,mean,880.583128295255
+feature,worst area,std,569.356992669949
+feature,worst area,min,185.2
+feature,worst area,q1,515.3
+feature,worst area,median,686.5
+feature,worst area,q3,1084
+feature,worst area,max,4254
+feature,worst area,iqr_lower,-337.75
+feature,worst area,iqr_upper,1937.05
+feature,worst area,iqr_outliers,35
+feature,worst smoothness,count,569
+feature,worst smoothness,missing,0
+feature,worst smoothness,negative,0
+feature,worst smoothness,zero,0
+feature,worst smoothness,mean,0.132368594024605
+feature,worst smoothness,std,0.0228324294048355
+feature,worst smoothness,min,0.07117
+feature,worst smoothness,q1,0.1166
+feature,worst smoothness,median,0.1313
+feature,worst smoothness,q3,0.146
+feature,worst smoothness,max,0.2226
+feature,worst smoothness,iqr_lower,0.0725
+feature,worst smoothness,iqr_upper,0.1901
+feature,worst smoothness,iqr_outliers,7
+feature,worst compactness,count,569
+feature,worst compactness,missing,0
+feature,worst compactness,negative,0
+feature,worst compactness,zero,0
+feature,worst compactness,mean,0.254265043936731
+feature,worst compactness,std,0.157336488913742
+feature,worst compactness,min,0.02729
+feature,worst compactness,q1,0.1472
+feature,worst compactness,median,0.2119
+feature,worst compactness,q3,0.3391
+feature,worst compactness,max,1.058
+feature,worst compactness,iqr_lower,-0.14065
+feature,worst compactness,iqr_upper,0.62695
+feature,worst compactness,iqr_outliers,16
+feature,worst concavity,count,569
+feature,worst concavity,missing,0
+feature,worst concavity,negative,0
+feature,worst concavity,zero,13
+feature,worst concavity,mean,0.272188483304042
+feature,worst concavity,std,0.208624280608132
+feature,worst concavity,min,0
+feature,worst concavity,q1,0.1145
+feature,worst concavity,median,0.2267
+feature,worst concavity,q3,0.3829
+feature,worst concavity,max,1.252
+feature,worst concavity,iqr_lower,-0.2881
+feature,worst concavity,iqr_upper,0.7855
+feature,worst concavity,iqr_outliers,12
+feature,worst concave points,count,569
+feature,worst concave points,missing,0
+feature,worst concave points,negative,0
+feature,worst concave points,zero,13
+feature,worst concave points,mean,0.114606223198594
+feature,worst concave points,std,0.0657323411959421
+feature,worst concave points,min,0
+feature,worst concave points,q1,0.06493
+feature,worst concave points,median,0.09993
+feature,worst concave points,q3,0.1614
+feature,worst concave points,max,0.291
+feature,worst concave points,iqr_lower,-0.079775
+feature,worst concave points,iqr_upper,0.306105
+feature,worst concave points,iqr_outliers,0
+feature,worst symmetry,count,569
+feature,worst symmetry,missing,0
+feature,worst symmetry,negative,0
+feature,worst symmetry,zero,0
+feature,worst symmetry,mean,0.290075571177504
+feature,worst symmetry,std,0.0618674675375187
+feature,worst symmetry,min,0.1565
+feature,worst symmetry,q1,0.2504
+feature,worst symmetry,median,0.2822
+feature,worst symmetry,q3,0.3179
+feature,worst symmetry,max,0.6638
+feature,worst symmetry,iqr_lower,0.14915
+feature,worst symmetry,iqr_upper,0.41915
+feature,worst symmetry,iqr_outliers,23
+feature,worst fractal dimension,count,569
+feature,worst fractal dimension,missing,0
+feature,worst fractal dimension,negative,0
+feature,worst fractal dimension,zero,0
+feature,worst fractal dimension,mean,0.0839458172231986
+feature,worst fractal dimension,std,0.018061267348894
+feature,worst fractal dimension,min,0.05504
+feature,worst fractal dimension,q1,0.07146
+feature,worst fractal dimension,median,0.08004
+feature,worst fractal dimension,q3,0.09208
+feature,worst fractal dimension,max,0.2075
+feature,worst fractal dimension,iqr_lower,0.04053
+feature,worst fractal dimension,iqr_upper,0.12301
+feature,worst fractal dimension,iqr_outliers,24
+calibration,uncalibrated,brier,0.0239209709940924
+calibration,uncalibrated,log_loss,0.0861405639380711
+calibration,uncalibrated,ece,0.0220138311248096
+calibration,uncalibrated,accuracy,0.964912280701754
+calibration,uncalibrated,roc_auc,0.994047619047619
+calibration,calibrated,brier,0.0286974263541445
+calibration,calibrated,log_loss,0.118472873934594
+calibration,calibrated,ece,0.0705388363410679
+calibration,calibrated,accuracy,0.973684210526316
+calibration,calibrated,roc_auc,0.994047619047619
+calibration,naive,brier,0.232703084497218
+calibration,naive,log_loss,0.658144488574446
+calibration,naive,ece,0.00401296496372899
+calibration,naive,accuracy,0.631578947368421
+calibration,naive,roc_auc,0.5
+split,train,count,341
+split,calibration,count,114
+split,test,count,114

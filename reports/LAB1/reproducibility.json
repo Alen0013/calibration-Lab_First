@@ -1,0 +1,69 @@
+{
+  "status": "совпадает",
+  "mode": "exact within the recorded environment, single BLAS thread",
+  "first_run_id": "a798160fb1df496391eed304040e7797",
+  "second_run_id": "eb7c0d5433c445758b6c3a1aaf6a1e90",
+  "seed": 42,
+  "data_sha256": "fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed",
+  "files_equal": {
+    "feature_summary.csv": true,
+    "class_balance.csv": true,
+    "correlations.csv": true,
+    "calibration_bins.csv": true,
+    "calibration_metrics.csv": true,
+    "test_predictions.csv": true,
+    "split_indices.json": true,
+    "eda_stats.csv": true,
+    "hash_manifest.json": true,
+    "config_snapshot.json": true
+  },
+  "first_file_hashes": {
+    "feature_summary.csv": "2b150131434edf98c72178efff2f9eda745280a52c5792a9b90e22a8bce6c41a",
+    "class_balance.csv": "4e042a84cc690c282cb6f9b4c8e7ca2f35dbf02bfb2262c51c0a27ce035c6333",
+    "correlations.csv": "862ddbb61eccf5941b300536d880ed67b989dd7fab2d1b666ef30b983f83e665",
+    "calibration_bins.csv": "9e7260068766fad9aa1662fac9897ef279a398dd0d931abeee40907bf321f9cc",
+    "calibration_metrics.csv": "1433a9aa0e7b5c4f743c13b2c50259ea4ca68e10b1231255415c9a056a8a5cf9",
+    "test_predictions.csv": "c322eb600135230641462656e3f7e950501053a33210f6c6f222f5a4b682a189",
+    "split_indices.json": "9806d7369039a21eeb0d7427c19eeef0462aa98028b0e928ebbb7db85744770b",
+    "eda_stats.csv": "433ce7153c9717f8104ae809ae97d5515fc9cb4cfa3743bc58f265b3cc69eb91",
+    "hash_manifest.json": "63133d564e7b4523bec58bf841c1532b56fad58e7eef55cbca0a0450e5285a7c",
+    "config_snapshot.json": "f21f04d9359fd600ea46e3deb40fec5dbe705532e535457c31479102d23a20d2"
+  },
+  "second_file_hashes": {
+    "feature_summary.csv": "2b150131434edf98c72178efff2f9eda745280a52c5792a9b90e22a8bce6c41a",
+    "class_balance.csv": "4e042a84cc690c282cb6f9b4c8e7ca2f35dbf02bfb2262c51c0a27ce035c6333",
+    "correlations.csv": "862ddbb61eccf5941b300536d880ed67b989dd7fab2d1b666ef30b983f83e665",
+    "calibration_bins.csv": "9e7260068766fad9aa1662fac9897ef279a398dd0d931abeee40907bf321f9cc",
+    "calibration_metrics.csv": "1433a9aa0e7b5c4f743c13b2c50259ea4ca68e10b1231255415c9a056a8a5cf9",
+    "test_predictions.csv": "c322eb600135230641462656e3f7e950501053a33210f6c6f222f5a4b682a189",
+    "split_indices.json": "9806d7369039a21eeb0d7427c19eeef0462aa98028b0e928ebbb7db85744770b",
+    "eda_stats.csv": "433ce7153c9717f8104ae809ae97d5515fc9cb4cfa3743bc58f265b3cc69eb91",
+    "hash_manifest.json": "63133d564e7b4523bec58bf841c1532b56fad58e7eef55cbca0a0450e5285a7c",
+    "config_snapshot.json": "f21f04d9359fd600ea46e3deb40fec5dbe705532e535457c31479102d23a20d2"
+  },
+  "metric_absolute_differences": {
+    "uncalibrated.brier": 0.0,
+    "uncalibrated.log_loss": 0.0,
+    "uncalibrated.ece": 0.0,
+    "uncalibrated.accuracy": 0.0,
+    "uncalibrated.roc_auc": 0.0,
+    "calibrated.brier": 0.0,
+    "calibrated.log_loss": 0.0,
+    "calibrated.ece": 0.0,
+    "calibrated.accuracy": 0.0,
+    "calibrated.roc_auc": 0.0,
+    "naive.brier": 0.0,
+    "naive.log_loss": 0.0,
+    "naive.ece": 0.0,
+    "naive.accuracy": 0.0,
+    "naive.roc_auc": 0.0
+  },
+  "max_absolute_difference": 0.0,
+  "exclusions": [
+    "run_id",
+    "generated_at",
+    "duration_seconds",
+    "output paths",
+    "PNG metadata"
+  ]
+}

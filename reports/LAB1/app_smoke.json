@@ -1,0 +1,177 @@
+{
+  "generated_at": "2026-11-22T14:39:53Z",
+  "interpreter": "/workspace/scratch/d920b57cb1dd/calibration-lab1/../clean-env/bin/python",
+  "base_url": "http://127.0.0.1:8766",
+  "browser_used": false,
+  "method": "HTTP requests against a real child server process",
+  "checks": [
+    {
+      "name": "html",
+      "path": "/",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "bytes": 2463,
+      "passed": true
+    },
+    {
+      "name": "css",
+      "path": "/style.css",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "bytes": 8913,
+      "passed": true
+    },
+    {
+      "name": "javascript",
+      "path": "/app.js",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "bytes": 18360,
+      "passed": true
+    },
+    {
+      "name": "status",
+      "path": "/api/status",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "bytes": 6823,
+      "passed": true
+    },
+    {
+      "name": "figure_class_balance",
+      "path": "/reports/LAB1/figures/class_balance.png",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "bytes": 53045,
+      "passed": true
+    },
+    {
+      "name": "figure_distributions",
+      "path": "/reports/LAB1/figures/distributions.png",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "bytes": 140766,
+      "passed": true
+    },
+    {
+      "name": "figure_correlations",
+      "path": "/reports/LAB1/figures/correlations.png",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "bytes": 193734,
+      "passed": true
+    },
+    {
+      "name": "figure_outliers",
+      "path": "/reports/LAB1/figures/outliers.png",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "bytes": 89946,
+      "passed": true
+    },
+    {
+      "name": "figure_calibration",
+      "path": "/reports/LAB1/figures/calibration.png",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "bytes": 189900,
+      "passed": true
+    },
+    {
+      "name": "unknown_action",
+      "path": "/api/run",
+      "method": "POST",
+      "expected_status": 400,
+      "actual_status": 400,
+      "bytes": 81,
+      "passed": true
+    },
+    {
+      "name": "malformed_json",
+      "path": "/api/run",
+      "method": "POST",
+      "expected_status": 400,
+      "actual_status": 400,
+      "bytes": 81,
+      "passed": true
+    },
+    {
+      "name": "non_object_json",
+      "path": "/api/run",
+      "method": "POST",
+      "expected_status": 400,
+      "actual_status": 400,
+      "bytes": 81,
+      "passed": true
+    },
+    {
+      "name": "foreign_origin",
+      "path": "/api/run",
+      "method": "POST",
+      "expected_status": 403,
+      "actual_status": 403,
+      "bytes": 80,
+      "passed": true
+    },
+    {
+      "name": "unknown_route",
+      "path": "/api/unknown",
+      "method": "POST",
+      "expected_status": 404,
+      "actual_status": 404,
+      "bytes": 46,
+      "passed": true
+    },
+    {
+      "name": "path_escape",
+      "path": "/reports/%2e%2e/%2e%2e/pyproject.toml",
+      "method": "GET",
+      "expected_status": 404,
+      "actual_status": 404,
+      "bytes": 330,
+      "passed": true
+    },
+    {
+      "name": "hidden_git_not_served",
+      "path": "/.git/config",
+      "method": "GET",
+      "expected_status": 404,
+      "actual_status": 404,
+      "bytes": 330,
+      "passed": true
+    },
+    {
+      "name": "real_verify_start",
+      "path": "/api/run",
+      "method": "POST",
+      "expected_status": 202,
+      "actual_status": 202,
+      "bytes": 21,
+      "passed": true
+    },
+    {
+      "name": "real_verify_completed",
+      "passed": true,
+      "exit_code": 0,
+      "action": "verify"
+    }
+  ],
+  "check_count": 18,
+  "all_passed": true,
+  "verify_job": {
+    "running": false,
+    "action": "verify",
+    "log": "$ python -m calibration_lab.cli verify --config configs/lab1.yaml\n\n{\n  \"status\": \"совпадает\",\n  \"path\": \"data/raw/breast_cancer.csv\",\n  \"sha256\": \"fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed\",\n  \"size_bytes\": 119913,\n  \"source\": \"https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.8.0/sklearn/datasets/data/breast_cancer.csv\",\n  \"dataset_url\": \"https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic\",\n  \"license\": \"CC BY 4.0\",\n  \"acquisition\": \"https_official_scikit_learn_1.8.0\"\n}\n\nКод завершения: 0. Время: 0.8 с.\n",
+    "exit_code": 0,
+    "elapsed_seconds": 0.75
+  }
+}

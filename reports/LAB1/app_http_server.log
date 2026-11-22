@@ -1,0 +1,20 @@
+ЛР1 Калибровка · http://127.0.0.1:8766
+Для остановки нажмите Ctrl+C.
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET /reports/LAB1/figures/class_balance.png HTTP/1.1" 200 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET /reports/LAB1/figures/distributions.png HTTP/1.1" 200 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET /reports/LAB1/figures/correlations.png HTTP/1.1" 200 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET /reports/LAB1/figures/outliers.png HTTP/1.1" 200 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET /reports/LAB1/figures/calibration.png HTTP/1.1" 200 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "POST /api/run HTTP/1.1" 400 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "POST /api/run HTTP/1.1" 400 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "POST /api/run HTTP/1.1" 400 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "POST /api/run HTTP/1.1" 403 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "POST /api/unknown HTTP/1.1" 404 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] code 404, message Not Found
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET /reports/%2e%2e/%2e%2e/pyproject.toml HTTP/1.1" 404 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] code 404, message Not Found
+127.0.0.1 - - [22/Nov/2026 19:39:52] "GET /.git/config HTTP/1.1" 404 -
+127.0.0.1 - - [22/Nov/2026 19:39:52] "POST /api/run HTTP/1.1" 202 -
