@@ -20,6 +20,7 @@ mlartifacts/
 *.db-wal
 
 # Runtime files and local credentials
+artifacts/
 .env
 .env.*
 !.env.example

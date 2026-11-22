@@ -1,0 +1,132 @@
+{
+  "scope": "Actual local Git and bare remotes only; no GitHub, authentication, external network, Actions or protection writes.",
+  "external_git_protocols_blocked": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "first_publication_preserves_both_histories_and_source_tree",
+      "passed": true,
+      "prepare": {
+        "mode": "created_bridge",
+        "head": "b36ab1d86585657739957f430dcbb95372e9720d",
+        "main_before": "5af4a109e3c055c232d2b5564c350f2b0ae43d91"
+      },
+      "push": {
+        "atomic": true,
+        "main_pushed": false,
+        "branches": {
+          "develop": {
+            "local_before": "b36ab1d86585657739957f430dcbb95372e9720d",
+            "remote_before": null,
+            "head": "b36ab1d86585657739957f430dcbb95372e9720d"
+          },
+          "feature/lab1-eda": {
+            "local_before": "fedab143e9662ae2cadc3023017df08c7a885ed3",
+            "remote_before": null,
+            "head": "fedab143e9662ae2cadc3023017df08c7a885ed3"
+          }
+        },
+        "tags": {},
+        "remote_main": "5af4a109e3c055c232d2b5564c350f2b0ae43d91"
+      }
+    },
+    {
+      "name": "repeat_before_merge_is_stable",
+      "passed": true,
+      "prepare": {
+        "mode": "existing_bridge",
+        "head": "b36ab1d86585657739957f430dcbb95372e9720d",
+        "main_before": "5af4a109e3c055c232d2b5564c350f2b0ae43d91"
+      }
+    },
+    {
+      "name": "repeat_after_merge_preserves_main_and_adds_no_commit",
+      "passed": true,
+      "prepare": {
+        "mode": "already_published",
+        "head": "b36ab1d86585657739957f430dcbb95372e9720d",
+        "main_before": "c180db598fe705aebf570be0793c75a9b07d7ac3"
+      }
+    },
+    {
+      "name": "unexpected_initial_main_refused_without_changes",
+      "passed": true,
+      "message": "Удалённый main изменён неизвестным образом. Ожидался закреплённый bootstrap либо уже опубликованная история проекта"
+    },
+    {
+      "name": "diverged_feature_refused_without_partial_push",
+      "passed": true,
+      "message": "Удалённая ветка feature/lab1-eda разошлась с локальной; ничего не отправлено"
+    },
+    {
+      "name": "remote_ahead_feature_preserved_and_local_ref_fast_forwarded",
+      "passed": true,
+      "push": {
+        "atomic": true,
+        "main_pushed": false,
+        "branches": {
+          "develop": {
+            "local_before": "b36ab1d86585657739957f430dcbb95372e9720d",
+            "remote_before": "b36ab1d86585657739957f430dcbb95372e9720d",
+            "head": "b36ab1d86585657739957f430dcbb95372e9720d"
+          },
+          "feature/lab1-eda": {
+            "local_before": "fedab143e9662ae2cadc3023017df08c7a885ed3",
+            "remote_before": "6fb21bdd92152a2267a43b184973db1b04c78982",
+            "head": "6fb21bdd92152a2267a43b184973db1b04c78982"
+          }
+        },
+        "tags": {},
+        "remote_main": "5af4a109e3c055c232d2b5564c350f2b0ae43d91"
+      }
+    },
+    {
+      "name": "annotated_tag_preserved_exactly_and_repeat_is_stable",
+      "passed": true,
+      "push": {
+        "atomic": true,
+        "main_pushed": false,
+        "branches": {
+          "develop": {
+            "local_before": "b36ab1d86585657739957f430dcbb95372e9720d",
+            "remote_before": null,
+            "head": "b36ab1d86585657739957f430dcbb95372e9720d"
+          },
+          "feature/lab1-eda": {
+            "local_before": "fedab143e9662ae2cadc3023017df08c7a885ed3",
+            "remote_before": null,
+            "head": "fedab143e9662ae2cadc3023017df08c7a885ed3"
+          }
+        },
+        "tags": {
+          "lab1-v1.0.0": "dd8ac04216b19339d8fe6b12367f0fa1a74c37a9"
+        },
+        "remote_main": "5af4a109e3c055c232d2b5564c350f2b0ae43d91"
+      }
+    },
+    {
+      "name": "conflicting_remote_tag_refused_before_any_branch_push",
+      "passed": true,
+      "message": "Удалённая метка lab1-v1.0.0 имеет другой SHA; перезапись запрещена"
+    },
+    {
+      "name": "bundle_restore_preserves_all_refs_and_repeat_is_safe",
+      "passed": true,
+      "source_branch_count": 7
+    },
+    {
+      "name": "dirty_restore_refused_without_losing_user_file",
+      "passed": true,
+      "message": "В подготовленном клоне есть несохранённые изменения. Они не будут перезаписаны:\n?? unsaved.txt"
+    },
+    {
+      "name": "different_bundle_refused_without_overwriting_existing_clone",
+      "passed": true,
+      "message": "Каталог публикации относится к другому bundle или репозиторию; он не будет перезаписан"
+    }
+  ],
+  "tested_source_file": "scripts/publish_github.py",
+  "tested_source_sha256": "b0b045fa998bfe020f528191daede53575ef2eb4229657cfa665942fdfac2dc3",
+  "verification_script": "scripts/verify_publisher_locally.py",
+  "platform": "Linux local Git only"
+}

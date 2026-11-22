@@ -1,5 +1,5 @@
 {
-  "description": "SHA-256 and byte size of all tracked project files except this manifest; generated after final report and review.",
+  "description": "SHA-256 and byte size of all tracked project files except this manifest; generated after final report, publisher and local verification.",
   "data_run_id": "370aa595b62543838eb3cd0d501ecb5b",
   "files": {
     ".gitattributes": {
@@ -15,20 +15,28 @@
       "sha256": "c51c66f67139dc44fbd4d4d8101d16ce3a9654a98089086bc513c8bcd13fbcf3"
     },
     ".github/workflows/ci.yml": {
-      "size_bytes": 1817,
-      "sha256": "44022fe592937233b6c4f6e1895b6c3a787bd9ade40caf3264daff8043dce1dc"
+      "size_bytes": 3921,
+      "sha256": "869cef40676d00a261c3dc2b57d09701530eafc137a0c57917fd4a06d4fa5455"
     },
     ".gitignore": {
-      "size_bytes": 606,
-      "sha256": "705292ad7e18f78d6a7d6b69b8d075a77bb460570f3aede2ee20b040d7e270ab"
+      "size_bytes": 617,
+      "sha256": "14c4d85ca95dd081dad57418ea246eb47e9e77b2910d116cd8a6b4dabbcd2b89"
     },
     ".pre-commit-config.yaml": {
       "size_bytes": 763,
       "sha256": "1ed315bb438ea7bed6c141c97f8ab14412c2cdbbdee8ed957ca8f35934ee55f0"
     },
+    "PUBLISH_GITHUB.bat": {
+      "size_bytes": 1554,
+      "sha256": "d5def725be26b6dc238a03e643f4ffb8f8f435ef9b714dcb8fca99a7c7dc1d95"
+    },
     "README.md": {
-      "size_bytes": 12126,
-      "sha256": "cb4afe5ce26edf2e431282ec6ae33e1559cfff74f3dfd0c2940946eda75954b2"
+      "size_bytes": 15013,
+      "sha256": "24248130def12219da0219282247fcf891151c35b4ae48bc7ac92e476d4e9159"
+    },
+    "START_HERE.txt": {
+      "size_bytes": 2285,
+      "sha256": "a189d3e10d94e10143f188f488aac8328a024a348f4e35cb67f3b26f3b6afccd"
     },
     "configs/lab1.yaml": {
       "size_bytes": 326,
@@ -47,12 +55,16 @@
       "sha256": "6bcc4b3e3734a81a734b1b0e72373f9c94aa09b121521a17a325d99ee002e015"
     },
     "docs/git_workflow.md": {
-      "size_bytes": 8156,
-      "sha256": "469cedcf4bd44f358a25094e116599efa5a9be6ba2e380a81efa07356e2d498e"
+      "size_bytes": 10249,
+      "sha256": "e2bb7a86c2440ce39c1efde11697d7b563a9a24c6a865b05c2e1826ca9accf3c"
     },
     "docs/llm_critical_comment_draft.md": {
       "size_bytes": 3068,
       "sha256": "a4d9f2e221ad7001890cf2c539cb51cd41218d30d0f92c84fc6d18310b099afa"
+    },
+    "docs/publish_github.md": {
+      "size_bytes": 11592,
+      "sha256": "8ee99b3e3e48c5beeefbf51b01361577b89deca1e86b1042e4cdfc555048767b"
     },
     "docs/requirements.md": {
       "size_bytes": 7849,
@@ -162,6 +174,10 @@
       "size_bytes": 320,
       "sha256": "11f55b02f37f7fc2790d4a1981f6ed3ddaee9dd7b52fdbb1bc5fe61314273ecd"
     },
+    "reports/LAB1/github_status.json": {
+      "size_bytes": 1094,
+      "sha256": "715628bb1cc63e6a0b4806eb534474cff59c088bb7c1e72f288df2d679c72cab"
+    },
     "reports/LAB1/hash_manifest.json": {
       "size_bytes": 815,
       "sha256": "63133d564e7b4523bec58bf841c1532b56fad58e7eef55cbca0a0450e5285a7c"
@@ -179,16 +195,16 @@
       "sha256": "e78e6106b18c6094fea62cbed52298804cc417b1731d9f5d4d635d03d081275c"
     },
     "reports/LAB1/lab1_report.docx": {
-      "size_bytes": 438977,
-      "sha256": "e35a59d7f46b314a60aa442489cc30de41b5b94c0ba2929abdb9d2d3e04a88b8"
+      "size_bytes": 439223,
+      "sha256": "10a9e5b2c46e8289ed1c18984a7e97bd0ab0672d797af701f347149f8775bbe6"
     },
     "reports/LAB1/lab1_report.md": {
-      "size_bytes": 25008,
-      "sha256": "bb245dc0a89665a12dd9b74b2080fa702da6c7aad6750e32d455ede2b29c53c5"
+      "size_bytes": 25774,
+      "sha256": "7755544ce7280947a2492afb6479f3262a6f596160a7c6abe920634e7a46348f"
     },
     "reports/LAB1/llm_review.md": {
-      "size_bytes": 9706,
-      "sha256": "ff1b12d6d91c4918c5a8dd13773f39382249f48890908aa5dbd13c7d53805aa1"
+      "size_bytes": 10231,
+      "sha256": "9c8f7df58eca9afaeca8a015990255f0fbda5346f6fa0f49b9a3e861e69a07d5"
     },
     "reports/LAB1/local_checks.json": {
       "size_bytes": 3797,
@@ -205,6 +221,10 @@
     "reports/LAB1/precommit_controls.json": {
       "size_bytes": 609,
       "sha256": "1bbfb41045072e3ec4e46f71384055f1864ce761cb103e51a953a454732ffe62"
+    },
+    "reports/LAB1/publisher_git_checks.json": {
+      "size_bytes": 5057,
+      "sha256": "4a90fb168de23c0ee77746c500063345014d6275eaf6e416d92d563d07c1a0fd"
     },
     "reports/LAB1/reproducibility.json": {
       "size_bytes": 3241,
@@ -231,8 +251,8 @@
       "sha256": "c322eb600135230641462656e3f7e950501053a33210f6c6f222f5a4b682a189"
     },
     "reports/LAB1/verification_summary.json": {
-      "size_bytes": 9625,
-      "sha256": "94767208278aced874c1af4e337764004d74bd4743b12cedcf15480533757cea"
+      "size_bytes": 10515,
+      "sha256": "288d0bfa8b64fce4e44ec311bf43bbfdb333c1c4e0b289e1479464e9721512e5"
     },
     "reports/LAB1/video_capture.json": {
       "size_bytes": 20573,
@@ -251,8 +271,8 @@
       "sha256": "7a77d646ad998a1f413ecaa7bdafa80af968d0ec951c0b503e6b6a9c2823f1e1"
     },
     "scripts/build_report.py": {
-      "size_bytes": 46564,
-      "sha256": "eb1b4ebef2aa3a2865843e458894fe440e924228822fab9f91d79b2b48854b47"
+      "size_bytes": 48171,
+      "sha256": "1ac187bdb08ce154d7ea6749d0eee62eecd07929fea193516f0c9828dde445c5"
     },
     "scripts/check_repo.py": {
       "size_bytes": 1420,
@@ -266,6 +286,10 @@
       "size_bytes": 5522,
       "sha256": "5d8626ea62b9fd82073bc70e97deed484c1e6c309809a5d255e8a9d0f56c6211"
     },
+    "scripts/publish_github.py": {
+      "size_bytes": 48287,
+      "sha256": "b0b045fa998bfe020f528191daede53575ef2eb4229657cfa665942fdfac2dc3"
+    },
     "scripts/record_cli_demo.py": {
       "size_bytes": 12789,
       "sha256": "44ea3cb6398b6d01d68fb428fd28a7535ca607b8c8be1f6459985bf0c83174b5"
@@ -277,6 +301,10 @@
     "scripts/restore_git.py": {
       "size_bytes": 1573,
       "sha256": "4fedc3dd20857123bf60514120c17a52b4b7a395dea21a336b239bb9102fb7fd"
+    },
+    "scripts/verify_publisher_locally.py": {
+      "size_bytes": 14534,
+      "sha256": "e9c7aacf0b5a382793b9236169e853b396f3a4d0c80ec89321ccc5a2ed46d867"
     },
     "src/calibration_lab/__init__.py": {
       "size_bytes": 161,

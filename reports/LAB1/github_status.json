@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-11-22T15:30:02.845993+00:00",
+  "repository_url": "https://github.com/Alen0013/calibration-lab1",
+  "repository_full_name": "Alen0013/calibration-lab1",
+  "repository_id": 1467680802,
+  "account": "Alen0013",
+  "connected": true,
+  "repository_created": true,
+  "published": false,
+  "ci_passed": null,
+  "main_protected": false,
+  "initial_main_sha": "efe65628fdf5a30ca4fb45967ca69c504a5ee587",
+  "observed_remote_contents": [
+    "README.md"
+  ],
+  "write_attempt": {
+    "operation": "create_tree",
+    "http_status": 403,
+    "message": "Resource not accessible by integration",
+    "remote_changed": false
+  },
+  "cli_authentication": {
+    "user_confirmed": true,
+    "completed": false,
+    "block": "Execution environment policy blocked network access to https://api.github.com:443"
+  },
+  "next_supported_action": "Run PUBLISH_GITHUB.bat on the account owner computer using ordinary GitHub CLI authentication. The script has not published this project yet.",
+  "publication_receipt": "artifacts/github_publication.json",
+  "human_review_completed": false
+}
