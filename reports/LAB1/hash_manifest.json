@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "dataset": "Breast Cancer Wisconsin (Diagnostic)",
+  "source_url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.8.0/sklearn/datasets/data/breast_cancer.csv",
+  "dataset_url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+  "doi": "https://doi.org/10.24432/C5DW2B",
+  "license": "CC BY 4.0",
+  "acquisition": "https_official_scikit_learn_1.8.0",
+  "files": [
+    {
+      "path": "data/raw/breast_cancer.csv",
+      "sha256": "fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed",
+      "size_bytes": 119913
+    }
+  ],
+  "format_note": "Official scikit-learn CSV: first line stores sample/feature counts and class names. Raw class 0=malignant, 1=benign. Original UCI IDs are omitted by scikit-learn."
+}

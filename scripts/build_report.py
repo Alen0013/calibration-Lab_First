@@ -290,6 +290,7 @@ def build(root: Path) -> tuple[Path, Path]:
     tamper = read_json(output / "hash_tamper.json")
     checks = read_json(output / "local_checks.json")
     app_checks = read_json(output / "app_smoke.json")
+    run_environment = read_json(output / "run_environment.json")
     remote = read_json(output / "github_status.json")
     summary, splits, metrics = result["summary"], result["splits"], result["metrics"]
     config = read_json(output / "config_snapshot.json", required=True)
@@ -315,9 +316,9 @@ def build(root: Path) -> tuple[Path, Path]:
     # Page 1: identity, purpose and data provenance.
     report.heading("Лабораторная работа 1")
     report.heading("Калибровка вероятностей классификатора", 2)
-    report.p(
-        f"Вариант {result['variant']} · дата {title_date} · автор {result.get('author', 'Автор не указан')}"
-    )
+    author = result.get("author", "Автор не указан").strip()
+    author_label = author if author.casefold() == "автор не указан" else f"Автор: {author}"
+    report.p(f"Вариант {result['variant']} · дата {title_date} · {author_label}")
     report.p("Git окружение, прекоммитные проверки и разведочный анализ данных")
     report.p(f"Коммит кода: `{result['git_commit']}`", small=True)
     report.p(f"Основной прогон MLflow: `{run_id}`", small=True)
@@ -670,9 +671,33 @@ def build(root: Path) -> tuple[Path, Path]:
     report.p(
         "Версии основного прогона: "
         + "; ".join(f"{name} {version}" for name, version in result["environment"].items())
-        + ". Полная фиксация зависимостей находится в файлах окружения проекта [E1].",
+        + ". Расширенный снимок среды снят после запуска: requirements-run.txt и run_environment.json [E1, E9].",
         small=True,
     )
+    report.p(
+        "requirements-lock.txt относится к независимой чистой установке. Этот снимок отличается "
+        "от среды основного анализа, в частности версиями SciPy, joblib и threadpoolctl. "
+        "Успешная установка и тесты подтверждают работоспособность окружения, но не численное "
+        "совпадение результатов между средами. Точная воспроизводимость проверена только "
+        "между повторами в одной записанной среде [E6, E8, E9].",
+        small=True,
+    )
+    if run_environment:
+        main_dependencies = run_environment.get("versions", {})
+        clean_dependencies = checks.get("dependencies", {})
+        environment_rows = [
+            [
+                name,
+                main_dependencies.get(name, "см. снимок"),
+                clean_dependencies.get(name, "см. снимок"),
+            ]
+            for name in ("scipy", "joblib", "threadpoolctl")
+        ]
+        report.table(
+            ["Пакет", "Основной прогон", "Чистая установка"],
+            environment_rows,
+            [2.1, 2.35, 2.4],
+        )
     report.p(
         "E1 — results.json, основной MLflow run_id указан в шапке. E2 — eda_stats.csv. "
         "E3 — src/calibration_lab/analysis.py и создаваемые CSV. E4 — configs/lab1.yaml и config_snapshot.json. "
@@ -680,7 +705,8 @@ def build(root: Path) -> tuple[Path, Path]:
         "E6 — reproducibility.json и reproducibility.log, команда reproduce. "
         "E7 — src/calibration_lab/data.py, hash_tamper.json и hash_tamper.log. "
         "E8 — local_checks.json, app_smoke.json и журналы проверки. Пути JSON, CSV и журналов, если не указано иное, "
-        "относительны reports/LAB1/.",
+        "относительны reports/LAB1/. E9 — run_environment.json и requirements-run.txt; "
+        "requirements-lock.txt описывает другую, чистую среду установки.",
         small=True,
     )
 

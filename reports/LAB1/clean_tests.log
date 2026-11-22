@@ -1,0 +1,36 @@
+$ /workspace/scratch/d920b57cb1dd/calibration-lab1/../clean-env/bin/python -m pytest --junitxml /workspace/scratch/d920b57cb1dd/clean_pytest_results.xml -rA
+
+...........................                                              [100%]
+==================================== PASSES ====================================
+- generated xml file: /workspace/scratch/d920b57cb1dd/clean_pytest_results.xml -
+=========================== short test summary info ============================
+PASSED tests/test_analysis.py::test_ece_hand_calculated_and_endpoints
+PASSED tests/test_analysis.py::test_empty_bins_do_not_change_ece_or_drop_observations
+PASSED tests/test_analysis.py::test_invalid_probabilities_rejected[probability0]
+PASSED tests/test_analysis.py::test_invalid_probabilities_rejected[probability1]
+PASSED tests/test_analysis.py::test_invalid_probabilities_rejected[probability2]
+PASSED tests/test_analysis.py::test_invalid_probabilities_rejected[probability3]
+PASSED tests/test_analysis.py::test_partition_disjoint_exhaustive_reproducible
+PASSED tests/test_analysis.py::test_eda_counts_and_test_predictions
+PASSED tests/test_analysis.py::test_source_provenance_without_git_executable
+PASSED tests/test_config.py::test_invalid_config_rejected[override0]
+PASSED tests/test_config.py::test_invalid_config_rejected[override1]
+PASSED tests/test_config.py::test_invalid_config_rejected[override2]
+PASSED tests/test_config.py::test_invalid_config_rejected[override3]
+PASSED tests/test_config.py::test_invalid_config_rejected[override4]
+PASSED tests/test_config.py::test_invalid_config_rejected[override5]
+PASSED tests/test_config.py::test_invalid_config_rejected[override6]
+PASSED tests/test_config.py::test_invalid_config_rejected[override7]
+PASSED tests/test_config.py::test_load_relative_to_config_directory
+PASSED tests/test_data.py::test_verified_data_schema_and_positive_class
+PASSED tests/test_data.py::test_data_tamper_rejected_without_silent_repair
+PASSED tests/test_data.py::test_manifest_cannot_launder_tampered_file
+PASSED tests/test_data.py::test_missing_manifest_is_rejected
+PASSED tests/test_data.py::test_tamper_demo_preserves_original
+PASSED tests/test_hooks.py::test_index_secret_is_blocked_even_if_worktree_is_clean
+PASSED tests/test_hooks.py::test_size_boundary_and_next_byte
+PASSED tests/test_hooks.py::test_normal_python_is_allowed
+PASSED tests/test_hooks.py::test_quick_checks_reject_invalid_python_and_yaml
+27 passed in 7.40s
+
+exit_code=0

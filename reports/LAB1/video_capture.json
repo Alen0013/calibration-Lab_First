@@ -1,0 +1,603 @@
+{
+  "kind": "captured_cli_output_replay_with_actual_generated_charts",
+  "browser_screen_recording": false,
+  "duration_seconds": 210,
+  "fps": 5,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "timing_note": "Command output was captured live. Reading pauses are expanded in playback.",
+  "run_id": "370aa595b62543838eb3cd0d501ecb5b",
+  "git_commit": "27348d56b63837354ef700f61c13cd723a206680",
+  "scenes": [
+    {
+      "title": "ЛР1 · Вариант 25 · Калибровка",
+      "note": "Работающая командная версия: данные, анализ, контроль изменений и повтор результата.",
+      "seconds": 16,
+      "run": [
+        "python",
+        "-m",
+        "calibration_lab.cli",
+        "--help"
+      ],
+      "capture": {
+        "command": "python -m calibration_lab.cli --help",
+        "events": [
+          {
+            "t": 0.7418,
+            "text": "usage: cli.py [-h] [--config CONFIG]"
+          },
+          {
+            "t": 0.7418,
+            "text": "              {prepare,verify,eda,run,reproduce,tamper} ..."
+          },
+          {
+            "t": 0.7419,
+            "text": ""
+          },
+          {
+            "t": 0.7419,
+            "text": "ЛР1 · вариант 25 · калибровка вероятностей"
+          },
+          {
+            "t": 0.7419,
+            "text": ""
+          },
+          {
+            "t": 0.7419,
+            "text": "positional arguments:"
+          },
+          {
+            "t": 0.7419,
+            "text": "  {prepare,verify,eda,run,reproduce,tamper}"
+          },
+          {
+            "t": 0.7419,
+            "text": "    prepare             Получить официальные данные и проверить закреплённый"
+          },
+          {
+            "t": 0.7419,
+            "text": "                        хеш"
+          },
+          {
+            "t": 0.7419,
+            "text": "    verify              Проверить целостность данных без перезаписи манифеста"
+          },
+          {
+            "t": 0.7419,
+            "text": "    eda                 Выполнить EDA, построить графики и записать MLflow-"
+          },
+          {
+            "t": 0.7419,
+            "text": "                        прогон"
+          },
+          {
+            "t": 0.7419,
+            "text": "    run                 То же, что eda"
+          },
+          {
+            "t": 0.7419,
+            "text": "    reproduce           Повторить EDA дважды и сравнить результаты"
+          },
+          {
+            "t": 0.7419,
+            "text": "    tamper              Проверить обнаружение подмены байта на изолированной"
+          },
+          {
+            "t": 0.7419,
+            "text": "                        копии"
+          },
+          {
+            "t": 0.7419,
+            "text": ""
+          },
+          {
+            "t": 0.7419,
+            "text": "options:"
+          },
+          {
+            "t": 0.7419,
+            "text": "  -h, --help            show this help message and exit"
+          },
+          {
+            "t": 0.7419,
+            "text": "  --config CONFIG       Путь к YAML-конфигурации"
+          }
+        ],
+        "duration_seconds": 0.8439,
+        "exit_code": 0
+      }
+    },
+    {
+      "title": "Проверяем происхождение и целостность данных",
+      "note": "Фиксированный SHA-256 сравнивается с исходным CSV. Эталон не пересчитывается из входа.",
+      "seconds": 20,
+      "run": [
+        "python",
+        "-m",
+        "calibration_lab.cli",
+        "verify"
+      ],
+      "capture": {
+        "command": "python -m calibration_lab.cli verify",
+        "events": [
+          {
+            "t": 0.6633,
+            "text": "{"
+          },
+          {
+            "t": 0.6633,
+            "text": "  \"status\": \"совпадает\","
+          },
+          {
+            "t": 0.6633,
+            "text": "  \"path\": \"data/raw/breast_cancer.csv\","
+          },
+          {
+            "t": 0.6633,
+            "text": "  \"sha256\": \"fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed\","
+          },
+          {
+            "t": 0.6633,
+            "text": "  \"size_bytes\": 119913,"
+          },
+          {
+            "t": 0.6633,
+            "text": "  \"source\": \"https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.8.0/sklearn/datasets/data/breast_cancer.csv\","
+          },
+          {
+            "t": 0.6633,
+            "text": "  \"dataset_url\": \"https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic\","
+          },
+          {
+            "t": 0.6633,
+            "text": "  \"license\": \"CC BY 4.0\","
+          },
+          {
+            "t": 0.6633,
+            "text": "  \"acquisition\": \"https_official_scikit_learn_1.8.0\""
+          },
+          {
+            "t": 0.6633,
+            "text": "}"
+          }
+        ],
+        "duration_seconds": 0.7608,
+        "exit_code": 0
+      }
+    },
+    {
+      "title": "Запускаем анализ и регистрируем эксперимент",
+      "note": "Реальный EDA создаёт таблицы, графики, метрики и MLflow run ID для отчёта.",
+      "seconds": 22,
+      "run": [
+        "python",
+        "-m",
+        "calibration_lab.cli",
+        "eda"
+      ],
+      "capture": {
+        "command": "python -m calibration_lab.cli eda",
+        "events": [
+          {
+            "t": 5.7123,
+            "text": "PASS: EDA завершён. Наблюдений: 569; признаков: 30"
+          },
+          {
+            "t": 5.7123,
+            "text": "Пропуски: 0; дубликаты: 0"
+          },
+          {
+            "t": 5.7123,
+            "text": "MLflow run_id: 370aa595b62543838eb3cd0d501ecb5b"
+          },
+          {
+            "t": 5.7123,
+            "text": "SHA-256: fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed"
+          },
+          {
+            "t": 5.7123,
+            "text": "uncalibrated: Brier=0.02392097; ECE=0.02201383; log_loss=0.08614056"
+          },
+          {
+            "t": 5.7123,
+            "text": "calibrated: Brier=0.02869743; ECE=0.07053884; log_loss=0.11847287"
+          },
+          {
+            "t": 5.7123,
+            "text": "naive: Brier=0.23270308; ECE=0.00401296; log_loss=0.65814449"
+          },
+          {
+            "t": 5.7123,
+            "text": "Артефакты: reports/LAB1/results.json"
+          }
+        ],
+        "duration_seconds": 6.1109,
+        "exit_code": 0
+      }
+    },
+    {
+      "title": "Исследуем данные до моделирования",
+      "note": "В датасете 569 наблюдений и 30 признаков. Классы учитываются при стратификации.",
+      "seconds": 16,
+      "image": "class_balance.png"
+    },
+    {
+      "title": "Проблема варианта — качество вероятностей",
+      "note": "На фиксированном test калибровка ухудшила Brier и ECE. Этот результат сохранён без подбора seed.",
+      "seconds": 26,
+      "image": "calibration.png"
+    },
+    {
+      "title": "Негативный контроль — подмена данных",
+      "note": "Меняем один байт в изолированной копии. Валидатор отклоняет её; исходный файл цел.",
+      "seconds": 22,
+      "run": [
+        "python",
+        "-m",
+        "calibration_lab.cli",
+        "tamper"
+      ],
+      "capture": {
+        "command": "python -m calibration_lab.cli tamper",
+        "events": [
+          {
+            "t": 0.5222,
+            "text": "{"
+          },
+          {
+            "t": 0.5222,
+            "text": "  \"status\": \"blocked\","
+          },
+          {
+            "t": 0.5222,
+            "text": "  \"rejected\": true,"
+          },
+          {
+            "t": 0.5222,
+            "text": "  \"control\": \"single_byte_tamper\","
+          },
+          {
+            "t": 0.5222,
+            "text": "  \"expected_sha256\": \"fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed\","
+          },
+          {
+            "t": 0.5222,
+            "text": "  \"actual_sha256\": \"afc3a85e3d25246f74f687d249b45060c478d394a38e2d826c050698ba7780ce\","
+          },
+          {
+            "t": 0.5222,
+            "text": "  \"error\": \"Хеш сырых данных не совпадает: ожидается fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed, получен afc3a85e3d25246f74f687d249b45060c478d394a38e2d826c050698ba7780ce; размер 119913 вместо 119913 байт\","
+          },
+          {
+            "t": 0.5222,
+            "text": "  \"original_unchanged\": true"
+          },
+          {
+            "t": 0.5223,
+            "text": "}"
+          }
+        ],
+        "duration_seconds": 0.5927,
+        "exit_code": 0
+      }
+    },
+    {
+      "title": "Доказываем защиту коммитов",
+      "note": "Реальные git commit блокируются для нарушения стиля, фиктивного секрета и большого файла.",
+      "seconds": 27,
+      "run": [
+        "python",
+        "scripts/negative_controls.py"
+      ],
+      "show_log": "precommit_block.log",
+      "capture": {
+        "command": "python scripts/negative_controls.py",
+        "events": [
+          {
+            "t": 1.2254,
+            "text": "{"
+          },
+          {
+            "t": 1.2254,
+            "text": "  \"all_blocked\": true,"
+          },
+          {
+            "t": 1.2254,
+            "text": "  \"cases\": ["
+          },
+          {
+            "t": 1.2254,
+            "text": "    {"
+          },
+          {
+            "t": 1.2254,
+            "text": "      \"case\": \"style\","
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"commit_exit_code\": 1,"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"head_unchanged\": true,"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"expected_marker\": \"Ruff lint\","
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"marker_observed\": true,"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"blocked\": true"
+          },
+          {
+            "t": 1.2255,
+            "text": "    },"
+          },
+          {
+            "t": 1.2255,
+            "text": "    {"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"case\": \"secret\","
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"commit_exit_code\": 1,"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"head_unchanged\": true,"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"expected_marker\": \"BLOCK_SECRET\","
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"marker_observed\": true,"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"blocked\": true"
+          },
+          {
+            "t": 1.2255,
+            "text": "    },"
+          },
+          {
+            "t": 1.2255,
+            "text": "    {"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"case\": \"oversize\","
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"commit_exit_code\": 1,"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"head_unchanged\": true,"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"expected_marker\": \"BLOCK_SIZE\","
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"marker_observed\": true,"
+          },
+          {
+            "t": 1.2255,
+            "text": "      \"blocked\": true"
+          },
+          {
+            "t": 1.2255,
+            "text": "    }"
+          },
+          {
+            "t": 1.2255,
+            "text": "  ]"
+          },
+          {
+            "t": 1.2255,
+            "text": "}"
+          }
+        ],
+        "duration_seconds": 1.2328,
+        "exit_code": 0
+      },
+      "full_log": "LAB1 variant 25: actual negative Git commit controls\nUTC: 2026-11-22T14:43:59.666779+00:00\nMethod: disposable repository, real installed pre-commit hook, real git commit.\nCredentials in this test are synthetic. No credential values are printed.\nSuccessful control = nonzero commit exit + unchanged HEAD + expected blocker.\n\n=== STYLE ===\n$ git add -- bad_style.py\n$ git commit -m 'test: reject style fixture'\nRuff lint................................................................Failed\n- hook id: ruff-check\n- exit code: 1\n\nI001 [*] Import block is un-sorted or un-formatted\n --> bad_style.py:1:1\n  |\n1 | import os\n  | ^^^^^^^^^\n2 | x=  1\n  |\nhelp: Organize imports\n\nF401 [*] `os` imported but unused\n --> bad_style.py:1:8\n  |\n1 | import os\n  |        ^^\n2 | x=  1\n  |\nhelp: Remove unused import: `os`\n\nFound 2 errors.\n[*] 2 fixable with the `--fix` option.\n\nRuff format check........................................................Failed\n- hook id: ruff-format\n- exit code: 1\n\nWould reformat: bad_style.py\n1 file would be reformatted\n\nStaged secrets and file size.............................................Passed\nPython syntax and structured file checks.................................Passed\ncommit_exit_code=1\nhead_unchanged=True\ncontrol_passed=True\n\n=== SECRET ===\n$ git add -- fake_credential.txt\n$ git commit -m 'test: reject secret fixture'\nRuff lint............................................(no files to check)Skipped\nRuff format check....................................(no files to check)Skipped\nStaged secrets and file size.............................................Failed\n- hook id: secrets-and-size\n- exit code: 1\n\nBLOCK_SECRET fake_credential.txt: GitHub token detected; value redacted. Remove credentials from the staged file.\nBLOCK_SECRET fake_credential.txt: credential assignment detected; value redacted. Remove credentials from the staged file.\n\nPython syntax and structured file checks.................................Passed\ncommit_exit_code=1\nhead_unchanged=True\ncontrol_passed=True\n\n=== OVERSIZE ===\n$ git add -- oversized_fixture.bin\n$ git commit -m 'test: reject oversize fixture'\nRuff lint............................................(no files to check)Skipped\nRuff format check....................................(no files to check)Skipped\nStaged secrets and file size.............................................Failed\n- hook id: secrets-and-size\n- exit code: 1\n\nBLOCK_SIZE oversized_fixture.bin: 1048577 bytes exceeds 1048576 bytes. Store large artifacts outside Git.\n\nPython syntax and structured file checks.............(no files to check)Skipped\ncommit_exit_code=1\nhead_unchanged=True\ncontrol_passed=True\n\nRESULT: PASS\n"
+    },
+    {
+      "title": "Повторяем эксперимент с тем же seed",
+      "note": "Два запуска сравнивают метрики и десять детерминированных файлов. Различие метрик равно нулю.",
+      "seconds": 24,
+      "run": [
+        "python",
+        "-m",
+        "calibration_lab.cli",
+        "reproduce"
+      ],
+      "capture": {
+        "command": "python -m calibration_lab.cli reproduce",
+        "events": [
+          {
+            "t": 6.5972,
+            "text": "PASS: повторные прогоны совпадает; max |delta| = 0.0"
+          },
+          {
+            "t": 6.5972,
+            "text": "MLflow A: a798160fb1df496391eed304040e7797; MLflow B: eb7c0d5433c445758b6c3a1aaf6a1e90"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: feature_summary.csv"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: class_balance.csv"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: correlations.csv"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: calibration_bins.csv"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: calibration_metrics.csv"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: test_predictions.csv"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: split_indices.json"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: eda_stats.csv"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: hash_manifest.json"
+          },
+          {
+            "t": 6.5972,
+            "text": "PASS: config_snapshot.json"
+          }
+        ],
+        "duration_seconds": 7.1017,
+        "exit_code": 0
+      }
+    },
+    {
+      "title": "Проверяем код автоматическими тестами",
+      "note": "Проверяются данные, настройки, разбиение, калибровочные интервалы и защитные хуки.",
+      "seconds": 18,
+      "run": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "-o",
+        "addopts="
+      ],
+      "capture": {
+        "command": "python -m pytest -q -o addopts=",
+        "events": [
+          {
+            "t": 3.1601,
+            "text": "...........................                                              [100%]"
+          },
+          {
+            "t": 3.1602,
+            "text": "27 passed in 2.76s"
+          }
+        ],
+        "duration_seconds": 3.8668,
+        "exit_code": 0
+      }
+    },
+    {
+      "title": "Фиксируем этапы работы в отдельных ветках",
+      "note": "Локальная история готова. Удалённые GitHub CI, PR и защита main требуют публикации.",
+      "seconds": 19,
+      "run": [
+        "git",
+        "log",
+        "--oneline",
+        "--graph",
+        "--all",
+        "-12"
+      ],
+      "capture": {
+        "command": "git log --oneline --graph --all -12",
+        "events": [
+          {
+            "t": 0.0043,
+            "text": "*   27348d5 merge: integrate reports and delivery tools"
+          },
+          {
+            "t": 0.0043,
+            "text": "|\\"
+          },
+          {
+            "t": 0.0043,
+            "text": "| * fc5ad84 docs: add reproducible reports and video recording workflows"
+          },
+          {
+            "t": 0.0043,
+            "text": "|/"
+          },
+          {
+            "t": 0.0043,
+            "text": "*   4d2a2eb merge: integrate interactive laboratory dashboard"
+          },
+          {
+            "t": 0.0043,
+            "text": "|\\"
+          },
+          {
+            "t": 0.0043,
+            "text": "| * 864e804 feat: add local dashboard and recoverable Windows launcher"
+          },
+          {
+            "t": 0.0043,
+            "text": "|/"
+          },
+          {
+            "t": 0.0043,
+            "text": "*   4124884 merge: integrate quality gates"
+          },
+          {
+            "t": 0.0043,
+            "text": "|\\"
+          },
+          {
+            "t": 0.0043,
+            "text": "| * 0320728 test: enforce commit checks and preserve negative controls"
+          },
+          {
+            "t": 0.0043,
+            "text": "|/"
+          },
+          {
+            "t": 0.0043,
+            "text": "*   bcf3091 merge: integrate laboratory analysis"
+          },
+          {
+            "t": 0.0043,
+            "text": "|\\"
+          },
+          {
+            "t": 0.0043,
+            "text": "| * 7dac362 feat: add verified data and reproducible calibration EDA"
+          },
+          {
+            "t": 0.0043,
+            "text": "|/"
+          },
+          {
+            "t": 0.0043,
+            "text": "* 2d927d0 chore: initialize reproducible laboratory scaffold"
+          }
+        ],
+        "duration_seconds": 0.0045,
+        "exit_code": 0
+      }
+    }
+  ]
+}

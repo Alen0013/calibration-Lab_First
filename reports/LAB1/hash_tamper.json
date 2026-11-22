@@ -1,0 +1,9 @@
+{
+  "status": "blocked",
+  "rejected": true,
+  "control": "single_byte_tamper",
+  "expected_sha256": "fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed",
+  "actual_sha256": "afc3a85e3d25246f74f687d249b45060c478d394a38e2d826c050698ba7780ce",
+  "error": "Хеш сырых данных не совпадает: ожидается fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed, получен afc3a85e3d25246f74f687d249b45060c478d394a38e2d826c050698ba7780ce; размер 119913 вместо 119913 байт",
+  "original_unchanged": true
+}

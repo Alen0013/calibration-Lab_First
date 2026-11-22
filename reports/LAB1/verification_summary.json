@@ -1,0 +1,294 @@
+{
+  "tests": {
+    "tests": 27,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 27
+  },
+  "install_pass": true,
+  "precommit_pass": true,
+  "hash_status": "совпадает",
+  "app_http": {
+    "generated_at": "2026-11-22T14:39:53Z",
+    "interpreter": "/workspace/scratch/d920b57cb1dd/calibration-lab1/../clean-env/bin/python",
+    "base_url": "http://127.0.0.1:8766",
+    "browser_used": false,
+    "method": "HTTP requests against a real child server process",
+    "checks": [
+      {
+        "name": "html",
+        "path": "/",
+        "method": "GET",
+        "expected_status": 200,
+        "actual_status": 200,
+        "bytes": 2463,
+        "passed": true
+      },
+      {
+        "name": "css",
+        "path": "/style.css",
+        "method": "GET",
+        "expected_status": 200,
+        "actual_status": 200,
+        "bytes": 8913,
+        "passed": true
+      },
+      {
+        "name": "javascript",
+        "path": "/app.js",
+        "method": "GET",
+        "expected_status": 200,
+        "actual_status": 200,
+        "bytes": 18360,
+        "passed": true
+      },
+      {
+        "name": "status",
+        "path": "/api/status",
+        "method": "GET",
+        "expected_status": 200,
+        "actual_status": 200,
+        "bytes": 6823,
+        "passed": true
+      },
+      {
+        "name": "figure_class_balance",
+        "path": "/reports/LAB1/figures/class_balance.png",
+        "method": "GET",
+        "expected_status": 200,
+        "actual_status": 200,
+        "bytes": 53045,
+        "passed": true
+      },
+      {
+        "name": "figure_distributions",
+        "path": "/reports/LAB1/figures/distributions.png",
+        "method": "GET",
+        "expected_status": 200,
+        "actual_status": 200,
+        "bytes": 140766,
+        "passed": true
+      },
+      {
+        "name": "figure_correlations",
+        "path": "/reports/LAB1/figures/correlations.png",
+        "method": "GET",
+        "expected_status": 200,
+        "actual_status": 200,
+        "bytes": 193734,
+        "passed": true
+      },
+      {
+        "name": "figure_outliers",
+        "path": "/reports/LAB1/figures/outliers.png",
+        "method": "GET",
+        "expected_status": 200,
+        "actual_status": 200,
+        "bytes": 89946,
+        "passed": true
+      },
+      {
+        "name": "figure_calibration",
+        "path": "/reports/LAB1/figures/calibration.png",
+        "method": "GET",
+        "expected_status": 200,
+        "actual_status": 200,
+        "bytes": 189900,
+        "passed": true
+      },
+      {
+        "name": "unknown_action",
+        "path": "/api/run",
+        "method": "POST",
+        "expected_status": 400,
+        "actual_status": 400,
+        "bytes": 81,
+        "passed": true
+      },
+      {
+        "name": "malformed_json",
+        "path": "/api/run",
+        "method": "POST",
+        "expected_status": 400,
+        "actual_status": 400,
+        "bytes": 81,
+        "passed": true
+      },
+      {
+        "name": "non_object_json",
+        "path": "/api/run",
+        "method": "POST",
+        "expected_status": 400,
+        "actual_status": 400,
+        "bytes": 81,
+        "passed": true
+      },
+      {
+        "name": "foreign_origin",
+        "path": "/api/run",
+        "method": "POST",
+        "expected_status": 403,
+        "actual_status": 403,
+        "bytes": 80,
+        "passed": true
+      },
+      {
+        "name": "unknown_route",
+        "path": "/api/unknown",
+        "method": "POST",
+        "expected_status": 404,
+        "actual_status": 404,
+        "bytes": 46,
+        "passed": true
+      },
+      {
+        "name": "path_escape",
+        "path": "/reports/%2e%2e/%2e%2e/pyproject.toml",
+        "method": "GET",
+        "expected_status": 404,
+        "actual_status": 404,
+        "bytes": 330,
+        "passed": true
+      },
+      {
+        "name": "hidden_git_not_served",
+        "path": "/.git/config",
+        "method": "GET",
+        "expected_status": 404,
+        "actual_status": 404,
+        "bytes": 330,
+        "passed": true
+      },
+      {
+        "name": "real_verify_start",
+        "path": "/api/run",
+        "method": "POST",
+        "expected_status": 202,
+        "actual_status": 202,
+        "bytes": 21,
+        "passed": true
+      },
+      {
+        "name": "real_verify_completed",
+        "passed": true,
+        "exit_code": 0,
+        "action": "verify"
+      }
+    ],
+    "check_count": 18,
+    "all_passed": true,
+    "verify_job": {
+      "running": false,
+      "action": "verify",
+      "log": "$ python -m calibration_lab.cli verify --config configs/lab1.yaml\n\n{\n  \"status\": \"совпадает\",\n  \"path\": \"data/raw/breast_cancer.csv\",\n  \"sha256\": \"fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed\",\n  \"size_bytes\": 119913,\n  \"source\": \"https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.8.0/sklearn/datasets/data/breast_cancer.csv\",\n  \"dataset_url\": \"https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic\",\n  \"license\": \"CC BY 4.0\",\n  \"acquisition\": \"https_official_scikit_learn_1.8.0\"\n}\n\nКод завершения: 0. Время: 0.8 с.\n",
+      "exit_code": 0,
+      "elapsed_seconds": 0.75
+    }
+  },
+  "negative_controls": {
+    "all_blocked": true,
+    "cases": [
+      {
+        "case": "style",
+        "commit_exit_code": 1,
+        "head_unchanged": true,
+        "expected_marker": "Ruff lint",
+        "marker_observed": true,
+        "blocked": true
+      },
+      {
+        "case": "secret",
+        "commit_exit_code": 1,
+        "head_unchanged": true,
+        "expected_marker": "BLOCK_SECRET",
+        "marker_observed": true,
+        "blocked": true
+      },
+      {
+        "case": "oversize",
+        "commit_exit_code": 1,
+        "head_unchanged": true,
+        "expected_marker": "BLOCK_SIZE",
+        "marker_observed": true,
+        "blocked": true
+      }
+    ]
+  },
+  "reproducibility": {
+    "status": "совпадает",
+    "mode": "exact within the recorded environment, single BLAS thread",
+    "first_run_id": "a798160fb1df496391eed304040e7797",
+    "second_run_id": "eb7c0d5433c445758b6c3a1aaf6a1e90",
+    "seed": 42,
+    "data_sha256": "fed3eb72d0575ef6192293f5093c6e801b1476b577d0386bf4455504522172ed",
+    "files_equal": {
+      "feature_summary.csv": true,
+      "class_balance.csv": true,
+      "correlations.csv": true,
+      "calibration_bins.csv": true,
+      "calibration_metrics.csv": true,
+      "test_predictions.csv": true,
+      "split_indices.json": true,
+      "eda_stats.csv": true,
+      "hash_manifest.json": true,
+      "config_snapshot.json": true
+    },
+    "first_file_hashes": {
+      "feature_summary.csv": "2b150131434edf98c72178efff2f9eda745280a52c5792a9b90e22a8bce6c41a",
+      "class_balance.csv": "4e042a84cc690c282cb6f9b4c8e7ca2f35dbf02bfb2262c51c0a27ce035c6333",
+      "correlations.csv": "862ddbb61eccf5941b300536d880ed67b989dd7fab2d1b666ef30b983f83e665",
+      "calibration_bins.csv": "9e7260068766fad9aa1662fac9897ef279a398dd0d931abeee40907bf321f9cc",
+      "calibration_metrics.csv": "1433a9aa0e7b5c4f743c13b2c50259ea4ca68e10b1231255415c9a056a8a5cf9",
+      "test_predictions.csv": "c322eb600135230641462656e3f7e950501053a33210f6c6f222f5a4b682a189",
+      "split_indices.json": "9806d7369039a21eeb0d7427c19eeef0462aa98028b0e928ebbb7db85744770b",
+      "eda_stats.csv": "433ce7153c9717f8104ae809ae97d5515fc9cb4cfa3743bc58f265b3cc69eb91",
+      "hash_manifest.json": "63133d564e7b4523bec58bf841c1532b56fad58e7eef55cbca0a0450e5285a7c",
+      "config_snapshot.json": "f21f04d9359fd600ea46e3deb40fec5dbe705532e535457c31479102d23a20d2"
+    },
+    "second_file_hashes": {
+      "feature_summary.csv": "2b150131434edf98c72178efff2f9eda745280a52c5792a9b90e22a8bce6c41a",
+      "class_balance.csv": "4e042a84cc690c282cb6f9b4c8e7ca2f35dbf02bfb2262c51c0a27ce035c6333",
+      "correlations.csv": "862ddbb61eccf5941b300536d880ed67b989dd7fab2d1b666ef30b983f83e665",
+      "calibration_bins.csv": "9e7260068766fad9aa1662fac9897ef279a398dd0d931abeee40907bf321f9cc",
+      "calibration_metrics.csv": "1433a9aa0e7b5c4f743c13b2c50259ea4ca68e10b1231255415c9a056a8a5cf9",
+      "test_predictions.csv": "c322eb600135230641462656e3f7e950501053a33210f6c6f222f5a4b682a189",
+      "split_indices.json": "9806d7369039a21eeb0d7427c19eeef0462aa98028b0e928ebbb7db85744770b",
+      "eda_stats.csv": "433ce7153c9717f8104ae809ae97d5515fc9cb4cfa3743bc58f265b3cc69eb91",
+      "hash_manifest.json": "63133d564e7b4523bec58bf841c1532b56fad58e7eef55cbca0a0450e5285a7c",
+      "config_snapshot.json": "f21f04d9359fd600ea46e3deb40fec5dbe705532e535457c31479102d23a20d2"
+    },
+    "metric_absolute_differences": {
+      "uncalibrated.brier": 0.0,
+      "uncalibrated.log_loss": 0.0,
+      "uncalibrated.ece": 0.0,
+      "uncalibrated.accuracy": 0.0,
+      "uncalibrated.roc_auc": 0.0,
+      "calibrated.brier": 0.0,
+      "calibrated.log_loss": 0.0,
+      "calibrated.ece": 0.0,
+      "calibrated.accuracy": 0.0,
+      "calibrated.roc_auc": 0.0,
+      "naive.brier": 0.0,
+      "naive.log_loss": 0.0,
+      "naive.ece": 0.0,
+      "naive.accuracy": 0.0,
+      "naive.roc_auc": 0.0
+    },
+    "max_absolute_difference": 0.0,
+    "exclusions": [
+      "run_id",
+      "generated_at",
+      "duration_seconds",
+      "output paths",
+      "PNG metadata"
+    ]
+  },
+  "github": {
+    "connected": true,
+    "published": false,
+    "remote_ci": null,
+    "main_protection": null,
+    "reason": "Connected plugin exposes no callable GitHub capabilities in active session; CLI is unauthenticated; destination repository not yet selected."
+  }
+}
