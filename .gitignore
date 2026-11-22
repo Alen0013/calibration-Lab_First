@@ -1,0 +1,45 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# MLflow runs are local evidence, not source files.
+mlruns/
+mlartifacts/
+*.db
+*.db-shm
+*.db-wal
+
+# Runtime files and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+*.tmp
+*.pid
+
+# Recordings are delivered separately; do not push large binary files.
+*.mp4
+*.webm
+*.mov
+*.mkv
+*.zip
+*.bundle
+
+# Reproduction scratch outputs; final reports and control logs stay tracked.
+reports/_reproduction/
+reports/_tmp/
+.pre-commit-cache/
+
